@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Bebas_Neue';
+    src: url('../fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+:root{
+    --background-color: rgb(231, 240, 248);
+    --font-color: #1a1a1a;
+    --seperator-color: rgba(0, 0, 0, 0.06);
+    --theme-shadow-color: inset 0px 0px 10px 10px rgba(198, 222, 11, 0.15),0px 0px 20px 20px rgba(198, 222, 11, 0.25);
+    --box-shadow-color-normal: rgba(0,0,0,0.1);
+    --box-shadow-color-hover: rgba(0,0,0,0.3);
+}
+
+.dark-theme{
+
+    --background-color: #010101;
+    --font-color: rgb(231, 240, 248);
+    --seperator-color: rgba(188, 188, 188, 0.09);
+    --theme-shadow-color: inset 10px 20px 0px 0px rgba(231, 240, 248, 0.09),0px 0px 20px 20px rgba(231, 240, 248, 0.20);
+    --box-shadow-color-normal: rgba(255, 255, 255, 0.1);
+    --box-shadow-color-hover: rgba(255, 255, 255, 0.18);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'spartan';
+    color: var(--font-color);
+}
+
+.product-section{
+    left: -5%;
+    top: 20%;
+}
+.product-section .selected-product{
+    position: relative;
+    display: flex;
+    
+}
+.product-section .selected-product img{
+        position: relative;
+        top: -20%;
+        right: 0%;
+        width: 100%;
+        max-width: 500px;
+}
+
+.product-section .selected-product .description{
+    position: relative;
+    top: -10%;
+    display: inline;
+    left: 0%;
+}
+.product-section .selected-product .description h5{
+    font-size: 1.5rem;
+    padding-bottom: 2.5rem;
+    color: #0d9cb6;
+}
+
+.product-section .selected-product .description h2{
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+}
+
+.product-section .selected-product .description h4{
+    padding-bottom: 1rem;
+}
+
+.product-section .selected-product .description .stars i{
+    font-size: 15px;
+    color: rgb(243, 181,25);
+    padding-bottom: 2.5rem;
+}
+.product-section .selected-product .description #item-description{
+    font-size: 2rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.product-section .selected-product .description p{
+    font-size: 1.2rem ;
+    width: 100%;
+    text-align: justify;
+    max-width: 800px;
+    padding-bottom: 1rem ;
+}
+.product-section .selected-product .description .quantity{
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+    width: 140px;
+    padding: 0;
+}
+.product-section .selected-product .description .quantity input{
+    position: relative;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 50px;
+    margin: 0;
+    border: none;
+    outline: none;
+    height: 2rem;
+    bottom: 5px;
+    
+    
+}
+.product-section .selected-product .description .quantity button{
+        font-size: 2rem;
+        cursor: pointer;
+        color: white;
+        outline: none;
+        border: none;
+        background-color: #010101;
+        width: 40px;
+        height: 40px;
+}
+.product-section .selected-product .description .quantity #minus{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.product-section .selected-product .description .quantity #plus{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

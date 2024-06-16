@@ -1,0 +1,58 @@
+{
+    "Machine Learning":{
+        "img":"img/chirath/shop/ml-front.jpg",
+        "img2":"img/chirath/shop/machinL-book.png",
+        "type":"book",
+        "author": "by Sebastian Raschka",
+        "price": "Rs.1500.00"
+
+    },
+    "Web development":{
+        "img":"img/chirath/shop/ml-front.jpg",
+        "img2":"img/chirath/shop/machinL-book.png",
+        "type":"book",
+        "author": "by Sebastian Raschka",
+        "price": "Rs.1500.00"
+
+    },
+    "Song of Ice and Fire":{
+        "img":"img/chirath/shop/ml-front.jpg",
+        "img2":"img/chirath/shop/machinL-book.png",
+        "type":"book",
+        "author": "by Sebastian Raschka",
+        "price": "Rs.1500.00"
+
+    },
+    "Harry Potter ":{
+        "img":"img/chirath/shop/ml-front.jpg",
+        "img2":"img/chirath/shop/machinL-book.png",
+        "type":"book",
+        "author": "by Sebastian Raschka",
+        "price": "Rs.1500.00"
+
+    },
+    "Harry Potter 2":{
+        "img":"img/chirath/shop/ml-front.jpg",
+        "img2":"img/chirath/shop/machinL-book.png",
+        "type":"book",
+        "author": "by Sebastian Raschka",
+        "price": "Rs.1500.00"
+
+    },
+    "Harry Potter3":{
+        "img":"img/chirath/shop/ml-front.jpg",
+        "img2":"img/chirath/shop/machinL-book.png",
+        "type":"book",
+        "author": "by Sebastian Raschka",
+        "price": "Rs.1500.00"
+
+    },
+    "Sherlock Home":{
+        "img":"img/chirath/shop/ml-front.jpg",
+        "img2":"img/chirath/shop/machinL-book.png",
+        "type":"book",
+        "author": "by Sebastian Raschka",
+        "price": "Rs.1500.00"
+
+    }
+}

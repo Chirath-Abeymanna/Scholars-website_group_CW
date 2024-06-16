@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'Italianno';
+    src: url('../fonts/Italianno/Italianno-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Bebas_Neue';
+    src: url('../fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+:root{
+    --background-color: rgb(231, 240, 248);
+    --font-color: #1a1a1a;
+    --seperator-color: rgba(0, 0, 0, 0.06);
+}
+.dark-theme{
+
+    --background-color: #010101;
+    --font-color: rgb(231, 240, 248);
+    --seperator-color: rgba(188, 188, 188, 0.09);
+
+}
+
+.light-theme{
+    --background-color: rgb(231, 240, 248);
+    --font-color: #1a1a1a;
+    --seperator-color: rgba(0, 0, 0, 0.06);
+}
+
+body{
+    background-color: var(--background-color);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    overflow: hidden;
+    transition: 0.1s;
+}
+.content{
+    background-color: #0c0d0f;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transition: 0.3s;
+}
+
+/* Creating the styles and animations for website title */
+.quote-container {
+    position: relative;
+    padding-top: 10px;
+}
+
+.logo {
+    margin-left: 40%;
+    font-family: 'Bebas_Neue', sans-serif;
+    color: #0CC2E6;
+    font-size: 8rem;
+    top: 10%;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.active.logo {
+    transform: translateY(0); 
+    opacity: 1;
+    margin-right: 50%;
+}
+
+/* Creating style and animation for mission */
+
+.topic{
+    display: inline-block;
+    font-family: 'Bebas_Neue',system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 4rem;
+    color: #048495;
+    padding: 0;
+    margin-left: 1%;
+    transform: translateY(100px);
+    transition-delay: 0.1s;
+}
+.mission{
+    margin-top: 1%;
+    text-align: center;
+    font-size: 2rem;
+    transform: translateY(100px);
+}
+
+.topic, .mission {
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.active.topic {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.active.mission{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Creating styles and animation for the team */
+
+.team{
+    margin-top: 3%;
+    margin-left: 3%;
+    text-align: center;
+    font-family: 'Bebas_Neue';
+    font-size: 3rem;
+    transform: translateY(100px);
+}
+
+.blue{
+    color: #048495 ;
+}
+.profile {
+    display: flex;
+    margin-top: 1%;
+    justify-content: space-around; 
+    align-items: center; 
+    width: 100%; 
+    height: 250px;
+    transform: translateY(50%);
+}
+
+.profile img {
+    border: 1px solid rgb(251, 251, 251); 
+    border-radius: 50%; 
+    width: 200px; 
+    height: 200px; 
+    margin-top: -30px;
+    
+}
+.S1{
+    object-fit: cover;
+    object-position: center -80px;
+}
+.S3 {
+    object-fit: cover;
+    object-position: center  -10px;
+}
+.profile_details{
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 30px ;
+    transform: translateY(50%);
+}
+
+.S1 p {
+    margin-top: -30px;
+    margin-left: -30px;
+    padding: 10px 0;
+}
+.S1 p:nth-child(2) {
+    margin-left: 1%;
+}
+.S1 p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.S2 p {
+    margin-top: -30px;
+    padding: 10px 0px 10px 30px ;
+}
+.S2 p:nth-child(2) {
+    margin-left: 15%;
+}
+.S2 p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.S3 p {
+    margin-top: -30px;
+    padding: 10px 0px 10px 60px ;
+}
+
+.S3 p:nth-child(2) {
+    margin-left: 10%;
+}
+.S3 p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.S4 p {
+    margin-top: -30px;
+    padding: 10px 0px 10px 30px ;
+}
+.S4 p:nth-child(2) {
+    margin-left: 20%;
+}
+.S4 p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.team, .profile, .profile_details {
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.active.profile{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.active.team, .active.profile_details {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}

@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>Scholars - Shop</title>
+        <link rel="icon" href="img/logo-title.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/main_style.css">
+        <link rel="stylesheet" href="css/shop_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="header">
+            <img src="img/logo-title.png" alt="">
+
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="Home.html" class=""><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="shop.html" class="active"><i class="fa fa-shop"></i> Shop</a></li>
+                    <li><a href="gallery.html" class=""><i class="fa fa-images"></i> Gallery</a></li>
+                    <li><a href="profile.html" class=""><i class="fa-solid fa-circle-user"></i> Profile</a></li>
+                    <li><a href="team.html" class=""><i class="fa-solid fa-users"></i> Our Team</a></li>
+                    <li><a href="feedback.html" class=""><i class="fa-solid fa-clipboard"></i> Make us better</a></li>
+                    <img src="img/moon.png" alt="" id="theme">
+                </ul>
+            </div>   
+        </div>
+        <div class="section-0">
+            <div class="welcome">
+                <i class="fa fa-circle-user"></i>
+                <h3>Welcome back</h3>
+            </div>
+            <div class="Search">
+                <form action="" class="search-bar">
+                    <input type="text" placeholder="Search products">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="cart">
+                <i class="fa fa-shopping-cart"></i>
+                <div class="item-number">
+                    <p>0</p>
+                </div>
+                <p> Cart</p>
+            </div>
+        </div>
+        <h2 id="top-sellers-title">Top Sellers</h2>
+        <div class="Top-sellers">
+            
+            <div class="list">
+                <div class="item">
+                    <img src="img/chirath/shop/book-1.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/chirath/shop/book-2.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/chirath/shop/book-3.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/chirath/shop/book-4.png" alt="">
+                </div>
+            </div>
+            <!-- Creating next and previous buttons -->
+            <div class="buttons">
+                    <button id="prev"><i class="fa fa-angle-left"></i></button>
+                    <button id="next"><i class="fa fa-angle-right"></i></button>
+            </div>
+            <!-- Creating dots -->
+             <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+             </ul>
+
+        </div>
+        <div class="section-1">
+            <h2>Products</h2>
+            <div class="pro-container">
+                <template id="data-content">
+                    <div class="card">
+                    <div class="product">  
+                        <div class="image">
+                            <div id="image-1">
+                                <img src="" alt="" id="img1">
+                            </div>
+                            <div id="image-2">
+                                <img src="" alt="" id="img2">
+                            </div>
+                        </div>
+                            <div class="description">
+                                <span id="type"></span>
+                                <h5></h5>
+                                <h6></h6>
+                                <div class="stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <h4></h4>
+                                <div id="purchase" class="buy-now">
+                                    <button>buy now</button>
+                                    <p>+ <span id="number">0</span></p>
+                                    <div class="cart"><button id="cart-anchor"><i class="fa fa-shopping-cart"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </template>
+            </div>
+        </div>
+        <div class="Section-2">
+            <div class="page-number">
+                <button>1</button>
+                <button>2</button>
+                <button><i class="fa fa-arrow-right"></i></button>
+            </div>
+        </div>
+    
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/shop.js"></script>
+    </body>
+</html>

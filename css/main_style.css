@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+}
+
+:root{
+    --background-color: rgb(231, 240, 248);
+    --font-color: #1a1a1a;
+    --seperator-color: rgba(0, 0, 0, 0.06);
+    --theme-shadow-color: inset 0px 0px 10px 10px rgba(198, 222, 11, 0.15),0px 0px 20px 20px rgba(198, 222, 11, 0.25);
+}
+.dark-theme{
+
+    --background-color: #010101;
+    --font-color: rgb(231, 240, 248);
+    --seperator-color: rgba(188, 188, 188, 0.09);
+    --theme-shadow-color: inset 10px 20px 0px 0px rgba(231, 240, 248, 0.09),0px 0px 20px 20px rgba(231, 240, 248, 0.20);
+
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+    border-radius: 1.2rem;
+    background-color: #aaaaaa;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--font-color);
+    height: 30%;
+    border-radius: 1.2rem;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease;
+    overflow-x: hidden;
+}
+
+#theme {
+    width: 100%;
+    max-width: 25px;
+    margin-left: 5vh;
+    margin-right: 0.6rem;
+    cursor: pointer;
+    background: transparent; 
+    box-shadow: var(--theme-shadow-color);
+    border-radius: 50%; 
+    outline: none;
+}
+
+.header {
+    width: 101%;
+    display: flex;
+    font-family: 'Spartan',sans-serif;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color:var(--background-color);
+    box-shadow: 0 5px 10px var(--seperator-color);
+    box-sizing: border-box;
+    transition: 0.3s ease;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 10px;
+}
+.header img{
+    width: 100%;
+    max-width: 60px;
+}
+
+.nav-bar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.nav-bar ul li{
+    list-style: none;
+    padding: 0.2rem 1rem;
+}
+.nav-bar ul li a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--font-color);
+    transition: 0.3s ease;
+    position: relative;
+
+}
+
+.nav-bar ul li :hover,
+.nav-bar ul li a.active{
+    color: rgb(8, 151, 194);
+}
+
+.nav-bar ul li a.active::after{
+    content: "";
+    width: 50%;
+    height: 3px;
+    border-radius: 50px;
+    background: rgb(8, 151, 194) ;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+.nav-bar ul li a::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    border-radius: 50px;
+    background: rgb(8, 151, 194) ;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-bar ul li :hover::after{
+    width: 100%;
+}
