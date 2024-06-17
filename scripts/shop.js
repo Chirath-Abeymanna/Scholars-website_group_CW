@@ -42,6 +42,9 @@ dots.forEach((li, key) => {
 document.addEventListener("DOMContentLoaded", function() {
     fetch("json/content.json").then(response => response.json())
     .then(data => {
+
+        //creating a dictionary to store the data that's been chosen to add to cart
+        let product_count = {};
         const template = document.getElementById("data-content").content;
         const product_containter = document.querySelector(".pro-container");
 
@@ -52,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const description_type = card.querySelector(".description #type");
             const description_h5 = card.querySelector(".description h5");
             const description_h6 = card.querySelector(".description h6");
-            const description_h4 = card.querySelector(".description h4");
+            const description_h4 = card.querySelector(".description #amount");
 
             // updating the elements with data
             image[0].src = product.img;
@@ -65,19 +68,39 @@ document.addEventListener("DOMContentLoaded", function() {
             description_h4.textContent = product.price;
 
             product_containter.appendChild(clone); 
+
+            card.addEventListener('click', function(event) {
+                // Check if clicked element is not a button
+                if (!event.target.matches('#buy-now') && !event.target.matches('#cart-anchor')&& !event.target.matches('#cart-icon')) {
+                    // Redirect to product.html with the product title
+                    const product_Title = encodeURIComponent(title);
+                    window.location.href = `../content/product.html?title=${product_Title}`;
+                }
+            });
         }
 
-        const cart_buttons = document.querySelectorAll(".cart #cart-anchor");
+
+        const cart_buttons = document.querySelectorAll(".cart-sub #cart-anchor");
         
         cart_buttons.forEach(button => {
             button.addEventListener("click", function(event) {
 
                 console.log("Working started");
-                console.log(cart_buttons);
 
-                const purchase_container = this.closest(".product").querySelector("#purchase");
-                const add_item_text = purchase_container.querySelector("p");
+                const purchase_container = this.closest(".product");
+                const purchase = purchase_container.querySelector("#purchase");
+                const add_item_text = purchase.querySelector("p");
                 const item_number = add_item_text.querySelector("#number");
+                const title = purchase_container.querySelector("h5").textContent;
+
+                //updating the product count
+                if (product_count[title]){
+                    product_count[title]++;
+                }else{
+                    product_count[title] =1;
+                }
+
+                
 
                 // Increasing the number with every click in the add item part
                 let currentNumber = parseInt(item_number.textContent);
@@ -99,6 +122,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 
             });
         });
+
+        //redirecting to the cart.html
+        console.log(product_count);
+        const main_cart = document.querySelector(".cart");
+        main_cart.addEventListener("click",function(event){
+            const product_data = encodeURIComponent(JSON.stringify(product_count));
+            window.location.href = `../content/cart.html?cartData=${product_data}`;
+        })
     })
     .catch(error => console.error('Error fetching the JSON data: ', error));
 });

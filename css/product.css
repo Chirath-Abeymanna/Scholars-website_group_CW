@@ -39,32 +39,37 @@
 body{
     font-family: 'spartan';
     color: var(--font-color);
+    overflow-x: visible;
 }
 
-.product-section{
+.product-section #card{
     left: -5%;
     top: 20%;
 }
 .product-section .selected-product{
     position: relative;
     display: flex;
+    top: 5rem;
     
 }
 .product-section .selected-product img{
         position: relative;
-        top: -20%;
+        padding-top: 5%;
         right: 0%;
         width: 100%;
-        max-width: 500px;
+        max-width: 400px;
+        height: auto;
+        max-height: 350px;
 }
 
 .product-section .selected-product .description{
     position: relative;
-    top: -10%;
+    top: -5rem;
     display: inline;
     left: 0%;
 }
 .product-section .selected-product .description h5{
+    margin-top: 10%;
     font-size: 1.5rem;
     padding-bottom: 2.5rem;
     color: #0d9cb6;
@@ -97,12 +102,19 @@ body{
     max-width: 800px;
     padding-bottom: 1rem ;
 }
+
+.product-section .selected-product .description h3{
+    font-size: 2rem;
+    color: #0d9cb6;
+    padding-bottom: 1.5rem;
+}
 .product-section .selected-product .description .quantity{
     background-color: white;
     position: relative;
     border-radius: 20px;
     width: 140px;
     padding: 0;
+    
 }
 .product-section .selected-product .description .quantity input{
     position: relative;
@@ -126,7 +138,7 @@ body{
         border: none;
         background-color: #010101;
         width: 40px;
-        height: 40px;
+        height: 42px;
 }
 .product-section .selected-product .description .quantity #minus{
     border-top-left-radius: 20px;
@@ -135,5 +147,44 @@ body{
 
 .product-section .selected-product .description .quantity #plus{
     border-top-right-radius: 20px;
+    width: 30%;
     border-bottom-right-radius: 20px;
+}
+
+.product-section .buttons{
+    position: relative;
+    top: 2rem;
+    padding-left: 25rem;
+}
+
+.product-section .buttons #buy-now{
+    padding: 1vh;
+    width: 100%;
+    max-width: 100px;
+    height:40px ;
+    color: white;
+    font-family: 'poppins';
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(36, 199, 253, 0.8);
+    cursor: pointer;
+    margin-right: 3rem;
+}
+.product-section .buttons #buy-now:hover,.product-section .buttons #cart:hover{
+    background-color: #2fb6d1;
+}
+
+.product-section .buttons #cart{
+    font-family: 'poppins';
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    border: none;
+    outline: none;   
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    line-height: 40px;
+    background-color: rgba(36, 199, 253, 0.8);
 }

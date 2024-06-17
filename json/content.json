@@ -3,56 +3,63 @@
         "img":"img/chirath/shop/ml-front.jpg",
         "img2":"img/chirath/shop/machinL-book.png",
         "type":"book",
+        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
         "author": "by Sebastian Raschka",
-        "price": "Rs.1500.00"
+        "price": "1500.00"
 
     },
     "Web development":{
         "img":"img/chirath/shop/ml-front.jpg",
         "img2":"img/chirath/shop/machinL-book.png",
+        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
         "type":"book",
         "author": "by Sebastian Raschka",
-        "price": "Rs.1500.00"
+        "price": "5200.00"
 
     },
     "Song of Ice and Fire":{
         "img":"img/chirath/shop/ml-front.jpg",
         "img2":"img/chirath/shop/machinL-book.png",
+        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
         "type":"book",
         "author": "by Sebastian Raschka",
-        "price": "Rs.1500.00"
+        "price": "500.00"
 
     },
     "Harry Potter ":{
         "img":"img/chirath/shop/ml-front.jpg",
         "img2":"img/chirath/shop/machinL-book.png",
+        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
         "type":"book",
         "author": "by Sebastian Raschka",
-        "price": "Rs.1500.00"
+        "price": "8000.00"
 
     },
     "Harry Potter 2":{
         "img":"img/chirath/shop/ml-front.jpg",
         "img2":"img/chirath/shop/machinL-book.png",
+        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
         "type":"book",
         "author": "by Sebastian Raschka",
-        "price": "Rs.1500.00"
+        "price": "7700.00"
 
     },
     "Harry Potter3":{
         "img":"img/chirath/shop/ml-front.jpg",
         "img2":"img/chirath/shop/machinL-book.png",
+        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
         "type":"book",
         "author": "by Sebastian Raschka",
-        "price": "Rs.1500.00"
+        "price": "100.00"
 
     },
     "Sherlock Home":{
         "img":"img/chirath/shop/ml-front.jpg",
         "img2":"img/chirath/shop/machinL-book.png",
+        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
         "type":"book",
         "author": "by Sebastian Raschka",
-        "price": "Rs.1500.00"
+        "price": "4000.00"
 
     }
 }

@@ -15,13 +15,13 @@
 /* Creating a top seller animation */
 @keyframes animate {
     0%{
-        background-position: 0 100%;
+        background-position: -500%;
     }
-    50%{
+    /* 50%{
         background-position: 100% 0;
-    }
+    } */
     100%{
-        background-position: 0 100%;
+        background-position: 500%;
     }
     
 }
@@ -60,17 +60,19 @@ body{
 
 }
 h2{
-    color: transparent;
+    overflow: hidden;
     font-size: 4rem;
     top: 15%;
+    letter-spacing: 4px;
     text-align: center;
     position: relative;
     font-family: 'Bebas_Neue';
-    background-image: linear-gradient(to left,#0CC2E6, #1b62c4,#20E5F6,#4073ff);
+    background: linear-gradient(90deg,#02e9fe, #1359bc,#02e9fe);
+    /* background-repeat: no-repeat; */
     -webkit-background-clip: text ;
-    animation: animate 5s linear infinite;
-    -webkit-background-size: 500%;
-    background-size: 500%;
+    -webkit-text-fill-color: rgba(18, 62, 125, 0.5);   
+    animation: animate 10s linear infinite;
+    background-size: 80%;
     padding: 2% ;
 }
 
@@ -339,18 +341,6 @@ button {
     box-shadow: 20px 20px 30px var(--box-shadow-color-hover);
 }
 
-
-.product:hover .image-2 {
-    opacity: 1;
-}
-.product .image-1{
-    display: block;
-}
-
-.product:hover .image-1{
-    display: none;
-}
-
 .product .image #img2{
     position: absolute;
     width: 100%;
@@ -367,7 +357,7 @@ button {
     opacity: 1;
     padding: 0;
     margin: 0;
-    width: 40%;
+    width: 10rem;
     height: 40%;
 }
 
@@ -407,7 +397,7 @@ button {
     background-color: #2fb6d1;
 }
 
-.pro-container .card .cart button{
+.pro-container .card .cart-sub button{
     position: relative;
     font-size: 1rem;
     left: 7.5rem;    

@@ -52,7 +52,7 @@ body{
 }
 
 .header {
-    width: 101%;
+    width: 100%;
     display: flex;
     font-family: 'Spartan',sans-serif;
     align-items: center;

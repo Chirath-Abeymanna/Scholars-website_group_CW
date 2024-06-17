@@ -2,7 +2,7 @@
     <head>
         <link rel="icon" href="../img/logo-title.png" type="image/x-icon">
         <title>Scholars - product</title>
-        <link rel="stylesheet" href="../css/nav_style.css">
+        <link rel="stylesheet" href="../css/main_style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="../css/product.css">
     </head>
@@ -13,47 +13,48 @@
             <div class="nav-bar">
                 <ul>
                     <li><a href="../Home.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="../profile.html" class=""><i class="fa-solid fa-circle-user"></i> Profile</a></li>
+                    <li><a href="../gallery.html" class=""><i class="fa fa-images"></i> Gallery</a></li>
                     <li><a href="../shop.html" class=""><i class="fa fa-shop"></i> Shop</a></li>
-                    <li><a href="#" class=""><i class="fa fa-images"></i> Gallery</a></li>
-                    <li><a href="#" class=""><i class="fa-solid fa-circle-user"></i> Profile</a></li>
-                    <li><a href="#" class=""><i class="fa-solid fa-users"></i> About us</a></li>
-                    <li><a href="#" class=""><i class="fa-solid fa-phone"></i> Contact us</a></li>
+                    <li><a href="../team.html" class=""><i class="fa-solid fa-users"></i> Our Team</a></li>
+                    <li><a href="../feedback.html" class=""><i class="fa-solid fa-clipboard"></i> Make us better</a></li>
                     <img src="../img/moon.png" alt="" id="theme">
                 </ul>
             </div>   
         </div>
 
         <div class="product-section">
-            <div class="selected-product">
-                <img src="../img/chirath/shop/machinL-book.png" alt="">
-                <div class="description">
-                    <h5>Book</h5>
-                    <h2>Machine Learning</h2>
-                    <h4>By Sebastian</h4>
-                    <div class="stars">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+            <template id="card">
+                <div class="selected-product">
+                    <img src="" alt="">
+                    <div class="description">
+                        <h5></h5>
+                        <h2></h2>
+                        <h4></h4>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p id="item-description">Item description</p>
+                        <p id="item-paragraph"></p>
+                        <h3>Rs. <span id="amount"></span></h3>
+                        <div class="quantity">
+                            <button id="minus">-</button>
+                            <input type="text" value="1" id="quantity">
+                            <button id="plus">+</button>
+                        </div>
                     </div>
-                    <p id="item-description">About this item</p>
-                    <p>Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.
-                    </p>
-                    <h3>Rs. <span>1500.00</span></h3>
-                    <div class="quantity">
-                        <button id="minus">-</button>
-                        <input type="text" placeholder="1">
-                        <button id="plus">+</button>
-                    </div>
-                    
                 </div>
-            </div>
-            <div class="buttons">
-                <button id="buy-now">Buy now</button>
-                <button id="cart"><i class="fa fa-shopping-cart"></i></button>
-            </div>
+                <div class="buttons">
+                    <button id="buy-now">Buy now</button>
+                    <button id="cart">Add to cart</button>
+                </div>
+            </template>
         </div>
         <script src="../scripts/theme.js"></script>
+        <script src="../scripts/product.js"></script>
     </body>
 </html>
