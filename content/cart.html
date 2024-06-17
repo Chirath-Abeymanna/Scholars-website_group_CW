@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="icon" href="../img/logo-title.png" type="image/x-icon">
+        <title>Scholars - product</title>
+        <link rel="stylesheet" href="../css/main_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../css/cart_style.css">
+    </head>
+    <body>
+        <div class="header">
+            <img src="../img/logo-title.png" alt="">
+
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="../Home.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="../profile.html" class=""><i class="fa-solid fa-circle-user"></i> Profile</a></li>
+                    <li><a href="../gallery.html" class=""><i class="fa fa-images"></i> Gallery</a></li>
+                    <li><a href="../shop.html" class=""><i class="fa fa-shop"></i> Shop</a></li>
+                    <li><a href="../team.html" class=""><i class="fa-solid fa-users"></i> Our Team</a></li>
+                    <li><a href="../feedback.html" class=""><i class="fa-solid fa-clipboard"></i> Make us better</a></li>
+                    <img src="../img/moon.png" alt="" id="theme">
+                </ul>
+            </div>   
+        </div>
+
+        <div class="cart-container">
+            <h2>Your Cart (<span id="total-amount">0</span> items)</h2>
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Product</th>
+                        <th>Type</th>
+                        <th>Title</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="sum-total">
+            <h3 class="total-text">Sub Total: </h3>
+            <h3 class="total-amount">Rs. <span class="total-amount-tag"></span></h3>
+            <hr>
+            <button id="buy-now">Check out</button>
+        </div>
+        <script src="../scripts/theme.js"></script>
+        <script src="../scripts/cart.js"></script>
+    </body>
+</html>
