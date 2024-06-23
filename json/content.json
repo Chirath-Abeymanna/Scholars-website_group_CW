@@ -2,64 +2,136 @@
     "Machine Learning":{
         "img":"img/chirath/shop/ml-front.jpg",
         "img2":"img/chirath/shop/machinL-book.png",
-        "type":"book",
-        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
+        "type":"Book",
+        "description":"Machine learning and AI are moving at a rapid pace. Researchers and practitioners are constantly struggling to keep up with the breadth of concepts and techniques. This book provides bite-sized bits of knowledge for your journey from machine learning beginner to expert, covering topics from various machine learning areas. Even experienced machine learning researchers and practitioners will encounter something new that they can add to their arsenal of techniques.",
         "author": "by Sebastian Raschka",
         "price": "1500.00"
 
     },
-    "Web development":{
-        "img":"img/chirath/shop/ml-front.jpg",
-        "img2":"img/chirath/shop/machinL-book.png",
-        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
-        "type":"book",
-        "author": "by Sebastian Raschka",
-        "price": "5200.00"
+    "Web Design":{
+        "img":"img/chirath/shop/web-front.jpg",
+        "img2":"img/chirath/shop/web-book.png",
+        "description":"MindTap for Campbell’s Web Design is the digital learning solution that powers students from memorization to mastery. It gives you complete control of your course—to provide engaging content, to challenge every individual, and to build their confidence. A pre-built Learning Path includes an interactive eBook, study tools, relevant activities, and more. Give your students hands-on skill practice with auto-graded lab assignments in a live HTML integrated development environment directly within MindTap. Empower students to accelerate their progress with MindTap. MindTap Web Design & Development for Campbell's Web Design: Introductory, 6th is a personalized digital learning solution that guides students to analyze, apply, and improve thinking, allowing you to measure skills and outcomes with ease. Key web design concepts and principles are brought to life using real-world examples with the support of media, critical thinking activities, and HTML coding labs. Analytics and reports provide a snapshot of class progress, time in course, engagement, and completion rates. Personalized teaching becomes yours through a Learning Ptah built with key student objectives and your syllabus in mind. Control what students see and when they see it.",
+        "type":"Book",
+        "author": "by Jennifer Campbell",
+        "price": "2200.00"
 
     },
+    "Core Java for the Impatient":{
+        "img":"img/chirath/shop/java-front.jpg",
+        "img2":"img/chirath/shop/java-book.png",
+        "description": "Modern Java introduces major enhancements that impact the core Java technologies and APIs at the heart of the Java platform. Many old Java idioms are no longer needed, and new features and programming paradigms can make you far more effective. However, navigating these changes can be challenging.",
+        "type":"Book",
+        "author":"by Cray S. Horsemarn",
+        "price":"1549.99"
+    },
     "Song of Ice and Fire":{
-        "img":"img/chirath/shop/ml-front.jpg",
-        "img2":"img/chirath/shop/machinL-book.png",
-        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
-        "type":"book",
-        "author": "by Sebastian Raschka",
+        "img":"img/chirath/shop/SOIF-front.jpg",
+        "img2":"img/chirath/shop/song-of-ice-and-fire.png",
+        "description":"A Song of Ice and Fire is a series of epic fantasy novels by the American novelist and screenwriter George R. R. Martin. He began writing the first volume, A Game of Thrones, in 1991, publishing it in 1996. Martin originally envisioned the series as a trilogy but has released five out of a planned seven volumes. The fifth and most recent entry in the series, A Dance with Dragons, was published in 2011. Martin continues to write the sixth novel, titled The Winds of Winter. A seventh novel, A Dream of Spring, is planned to follow.",
+        "type":"Book",
+        "author": "by George R. R. Martin",
+        "price": "3000.00"
+
+    },
+    "Harry Potter 6th edition":{
+        "img":"img/chirath/shop/harry-potter-front.jpg",
+        "img2":"img/chirath/shop/harry-potter.png",
+        "description":"Harry Potter and the Half-Blood Prince is a fantasy novel written by British author J. K. Rowling and the sixth and penultimate novel in the Harry Potter series. Set during Harry Potter's sixth year at Hogwarts, the novel explores the past of the boy wizard's nemesis, Lord Voldemort, and Harry's preparations for the final battle against Voldemort alongside his headmaster and mentor Albus Dumbledore.",
+        "type":"Book",
+        "author": "by J.K. Rowling",
+        "price": "2999.99"
+
+    },
+    "Higher eduation":{
+        "img":"img/chirath/shop/edu-magazine-front.jpg",
+        "img2":"img/chirath/shop/edu-magazine-front.jpg",
+        "description":"Higher Education Digest, an independent information portal with a digital and print-on-demand magazine, covers anything that matters to the leaders and readers of the higher education sector worldwide. More than a mere reporting of news, it does an in-depth analysis on the latest developments of the education system around the world for anyone who cares – students, parents, administrators, faculty members, academic researchers, recruiters, industry professionals and all other stakeholders. With the guidance of an expert advisory panel consisting of seasoned academics and industry honchos, the Higher Education Digest is here to instigate meaningful conversations among the public, which will ultimately help the large number of higher education community members to make informed decisions. In a nutshell, the Higher Education Digest is an excellent platform for aspirants to Connect, Network, Share and Learn.",
+        "type":"Magazine",
+        "author": "by Seema Mahajan",
         "price": "500.00"
 
     },
-    "Harry Potter ":{
-        "img":"img/chirath/shop/ml-front.jpg",
-        "img2":"img/chirath/shop/machinL-book.png",
-        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
-        "type":"book",
-        "author": "by Sebastian Raschka",
-        "price": "8000.00"
+    "Astronomy for Beginners":{
+        "img":"img/chirath/shop/astronomy-font.jpg",
+        "img2":"img/chirath/shop/astronomy-book.png",
+        "description":"Astronomy is inherently more observational rather than an elemental study of science. All measurements are performed at a greater distance from the object of interest, with no control of quantities such as chemical composition, pressure, or temperature. You will also understand the study of the solar system with relation to the gravitational attraction that holds the planets in their elliptical orbits around the sun. An early study of the universe was done through the naked eyes.",
+        "type":"Book",
+        "author": "by Sally R. Ball",
+        "price": "5000.00"
 
     },
-    "Harry Potter 2":{
-        "img":"img/chirath/shop/ml-front.jpg",
-        "img2":"img/chirath/shop/machinL-book.png",
-        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
-        "type":"book",
-        "author": "by Sebastian Raschka",
-        "price": "7700.00"
-
-    },
-    "Harry Potter3":{
-        "img":"img/chirath/shop/ml-front.jpg",
-        "img2":"img/chirath/shop/machinL-book.png",
-        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
-        "type":"book",
-        "author": "by Sebastian Raschka",
-        "price": "100.00"
-
-    },
-    "Sherlock Home":{
-        "img":"img/chirath/shop/ml-front.jpg",
-        "img2":"img/chirath/shop/machinL-book.png",
-        "description":"Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.",
-        "type":"book",
-        "author": "by Sebastian Raschka",
+    "Python 101":{
+        "img":"img/chirath/shop/python-front.jpg",
+        "img2":"img/chirath/shop/python-front.jpg",
+        "description":"Full Python 101 Crash Course for beginners. You'll learn Python from scratch and start your path to becoming a Python Developer in 2024 with this 8-hour course + projects & exercises!",
+        "type":"Video Series",
+        "author": "by Micheal Driscroll",
         "price": "4000.00"
 
+    },
+    "Current Civil Engineering":{
+        "img":"img/chirath/shop/ce-front.jpg",
+        "img2":"img/chirath/shop/ce-front.jpg",
+        "description": "This is the natural cycle of many civil engineering companies and their owners or top leaders: An engineer or team of engineers starts the business, works over the years to grow the firm and expand its operations, but ultimately must give way to new blood. When this sort of transition is planned well and implemented effectively, the firm remains strong and viable. But if the firm’s leaders have not carefully thought out what should happen after they depart, the result can undo decades of effort.",
+        "type":"Magazine",
+        "author":"by Shawn Parker",
+        "price":"400.00"
+    },
+    "God Emperor of Dune":{
+        "img":"img/chirath/shop/dune-front.jpg",
+        "img2":"img/chirath/shop/dune-book.png",
+        "description": "Leto II Atreides, the God Emperor, has ruled the universe as a tyrant for 3,500 years after becoming a hybrid of human and sandworm. The death of all other sandworms as a result of the terraforming of Arrakis, and his control of the remaining supply of the all-important spice, has allowed him to keep civilization under his complete command. Leto has been physically transformed into a worm, retaining only his human face and arms, and though he is now seemingly immortal and invulnerable to harm, he is prone to instinct-driven bouts of violence when provoked to anger. As a result, his rule is one of religious awe and despotic fear",
+        "type":"Book",
+        "author":"by Frank Herbert",
+        "price":"3999.99"
+    },
+    "Machine Learning Algorithms":{
+        "img":"img/chirath/shop/mla-front.jpg",
+        "img2":"img/chirath/shop/mla-front.jpg",
+        "description": "This Machine Learning Algorithms video will help you learn what is Machine Learning, various Machine Learning problems and algorithms, key Machine Learning algorithms with simple examples, and use cases implemented in Python. The key Machine Learning algorithms discussed in detail are Linear Regression, Logistic Regression, Decision Tree, Random Forest, and KNN algorithm. ",
+        "type":"Video Series",
+        "author":"by Benjamin Major",
+        "price":"2499.00"
+    },
+    "Python: OOP concepts":{
+        "img":"img/chirath/shop/py-oop-front.jpg",
+        "img2":"img/chirath/shop/py-oop-front.jpg",
+        "description": "Object-Oriented Python is an intuitive and thorough guide to mastering object-oriented programming from the ground up. You'll cover the basics of building classes and creating objects, and put theory into practice using the pygame package with clear examples that help visualize the object-oriented style. You'll explore the key concepts of object-oriented programming - encapsulation, polymorphism, and inheritance - and learn not just how to code with objects, but the absolute best practices for doing so. Finally, you'll bring it all together by building a complex video game, complete with full animations and sounds. The book covers two fully functional Python code packages that will speed up development of graphical user interface (GUI) programs in Python.",
+        "type":"Magazine",
+        "author":"by Irv Karls",
+        "price":"700.00"
+    },
+    "Core of Biology":{
+        "img":"img/chirath/shop/bio-mag.webp",
+        "img2":"img/chirath/shop/bio-mag.webp",
+        "description": "Modern Java introduces major enhancements that impact the core Java technologies and APIs at the heart of the Java platform. Many old Java idioms are no longer needed, and new features and programming paradigms can make you far more effective. However, navigating these changes can be challenging.",
+        "type":"Magazine",
+        "author":"by Edward colins",
+        "price":"550.00"
+    },
+    "Ethical Hacking":{
+        "img":"img/chirath/shop/eh-front.jpg",
+        "img2":"img/chirath/shop/eh-book.png",
+        "description": "If you wish to enter the world of ethical hacking, this book is for you. Ethical Hacking: A Comprehensive Beginner’s Guide to Learn and Master Ethical Hacking will walk you through the processes, skills, and tools you need to succeed. If you want to master ethical hacking, then this is the book you have been looking for.",
+        "type":"Book",
+        "author":"by Hein Smith & Hilary Morrison",
+        "price":"3999.99"
+    },
+    "Intro to Project Management":{
+        "img":"img/chirath/shop/project-front.jpg",
+        "img2":"img/chirath/shop/project-front.jpg",
+        "description": "If you wish to enter the world of ethical hacking, this book is for you. Ethical Hacking: A Comprehensive Beginner’s Guide to Learn and Master Ethical Hacking will walk you through the processes, skills, and tools you need to succeed. If you want to master ethical hacking, then this is the book you have been looking for.",
+        "type":"Magazine",
+        "author":"by Sheila Devon",
+        "price":"900.00"        
+    },
+    "IOT Technology ?":{
+        "img":"img/chirath/shop/iot-front.jpg",
+        "img2":"img/chirath/shop/iot-front.jpg",
+        "description": "Internet of Things is the next big thing. It is extending its power beyond just traditional computers or smartphones. It involves several physical devices interconnected and capable of transferring data over a network. The Internet of Things is actually a pretty simple concept, it means taking all the things in the world and connecting them to the internet. So this video will help you get a good hang of IoT and its constitution. ",
+        "type":"Video Series",
+        "author":"by Bruce Wayne",
+        "price":"2499.59"
     }
 }
