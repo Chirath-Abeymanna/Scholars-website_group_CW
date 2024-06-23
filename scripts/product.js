@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const quantity = document.getElementById("quantity");
         const add_item = document.getElementById("plus");
         const reduct_item = document.getElementById("minus");
+        const buy_now_btn = document.getElementById("buy-now");
+        const price_tag = document.getElementById("amount");
 
         // Ensure elements are found before attaching event listeners
         console.log(quantity, add_item, reduct_item);
@@ -63,6 +65,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
             quantity.value = currentValue + 1;
         });
+
+        buy_now_btn.addEventListener('click',()=>{
+
+            let q = document.getElementById("quantity");
+
+            let current_quantity = parseInt(q.value);
+            let price = parseInt(price_tag.textContent);
+
+            const final_price = current_quantity * price;
+            
+            const url_price = encodeURIComponent(parseInt(final_price));
+            window.location.href =`../content/checkout.html?price=${url_price}`;
+
+
+        })
+
+
 
         // Debugging
         console.log(quantity.value);

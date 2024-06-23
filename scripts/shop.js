@@ -1,5 +1,6 @@
 let slider = document.querySelector('.Top-sellers .list');
 let items = document.querySelectorAll('.Top-sellers .list .item');
+let img_tag = document.querySelectorAll('.Top-sellers .list button');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let dots = document.querySelectorAll('.Top-sellers .dots li');
@@ -7,20 +8,22 @@ const product_template = document.querySelector("[data-content]");
 
 
 //Creating the functions for image slider in top sellers
-let lengthItems = items.length - 1;
+let length_items = items.length - 1;
 let active = 0;
 next.onclick = function(){
-    active = active + 1 <= lengthItems ? active + 1 : 0;
+    active = active + 1 <= length_items ? active + 1 : 0;
     reloadSlider();
 }
 prev.onclick = function(){
-    active = active - 1 >= 0 ? active - 1 : lengthItems;
+    active = active - 1 >= 0 ? active - 1 : length_items;
     reloadSlider();
 }
 let refreshInterval = setInterval(()=> {next.click()}, 5000);
+
 function reloadSlider(){
+
     slider.style.left = -items[active].offsetLeft + 'px';
-    // 
+    
     let last_active_dot = document.querySelector('.Top-sellers .dots li.active');
     last_active_dot.classList.remove('active');
     dots[active].classList.add('active');
@@ -29,6 +32,16 @@ function reloadSlider(){
     refreshInterval = setInterval(()=> {next.click()}, 5000);
 
 }
+img_tag.forEach((button)=>{
+    console.log(button)
+    let img = button.id;
+    console.log(img)
+    button.addEventListener('click',()=>{
+        let title = encodeURIComponent(img);
+        window.location.href = `../content/product.html?title=${title}`;
+    })
+    
+})
 
 dots.forEach((li, key) => {
     li.addEventListener('click', ()=>{
@@ -37,9 +50,23 @@ dots.forEach((li, key) => {
     })
 })
 
-// Creating functions adding items
+//creating the search functions
+let search_bar = document.getElementById("search-bar");
+let search_btn = document.getElementById("search-btn");
+
+search_btn.addEventListener('click',(event)=>{
+    event.preventDefault()
+
+    search_item_value = search_bar.value;
+    console.log(search_item_value);
+    const search_items = encodeURIComponent(search_item_value);
+    window.location.href = `content/search.html?search=${search_items}`;
+})
+
+// Creating functions adding items to the product cardss
 
 document.addEventListener("DOMContentLoaded", function() {
+
     fetch("json/content.json").then(response => response.json())
     .then(data => {
 
@@ -49,9 +76,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const product_containter = document.querySelector(".pro-container");
 
         for (const [title, product] of Object.entries(data)) {
+
             const clone = template.cloneNode(true);
             const card = clone.querySelector('.product'); 
             const image = card.querySelectorAll('.image img');
+    
             const description_type = card.querySelector(".description #type");
             const description_h5 = card.querySelector(".description h5");
             const description_h6 = card.querySelector(".description h6");
@@ -77,12 +106,29 @@ document.addEventListener("DOMContentLoaded", function() {
                     window.location.href = `../content/product.html?title=${product_Title}`;
                 }
             });
+
         }
 
-
-        const cart_buttons = document.querySelectorAll(".cart-sub #cart-anchor");
+        const buy_now_btn = document.querySelectorAll(".buy-btn");
+            console.log(buy_now_btn)
         
-        cart_buttons.forEach(button => {
+
+            buy_now_btn.forEach(button =>{
+            button.addEventListener("click",function(event){
+                const container = this.closest(".product")
+                const price_tag = container.querySelector("#amount");
+
+                const price = encodeURIComponent(parseInt(price_tag.textContent));
+                window.location.href =`../content/checkout.html?price=${price}`;
+
+                console.log(Number.isInteger(price));
+            })
+        })
+
+
+        const cart_button = document.querySelectorAll(".cart-sub #cart-anchor");
+        
+        cart_button.forEach(button => {
             button.addEventListener("click", function(event) {
 
                 console.log("Working started");
@@ -99,8 +145,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 }else{
                     product_count[title] =1;
                 }
-
-                
 
                 // Increasing the number with every click in the add item part
                 let currentNumber = parseInt(item_number.textContent);
@@ -128,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const main_cart = document.querySelector(".cart");
         main_cart.addEventListener("click",function(event){
             const product_data = encodeURIComponent(JSON.stringify(product_count));
-            window.location.href = `../content/cart.html?cartData=${product_data}`;
+            window.location.href = `content/cart.html?cartData=${product_data}`;
         })
     })
     .catch(error => console.error('Error fetching the JSON data: ', error));

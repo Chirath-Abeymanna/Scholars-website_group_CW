@@ -27,12 +27,13 @@ document.addEventListener("DOMContentLoaded", function() {
             const cart_items_container = document.getElementById("cart-items");
 
             // Function to create a new row in the cart table
-            function create_row(title, quantity) {
+            function create_row(title, quantity,number) {
                 const product = data[title];
 
                 if (!product) return; 
 
                 const row = document.createElement("tr");
+                row.classList.add(`${number}`)
 
                 // Checkbox column
                 const check_box_container = document.createElement("td");
@@ -93,12 +94,38 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Price column
                 const price_container = document.createElement("td");
                 price_container.classList.add("price");
-                price_container.textContent = `Rs. ${product.price * quantity}.00`; 
+                price_container.innerHTML = `Rs. <span class="amount-tag">${(product.price*quantity).toFixed(2)}</span>`; 
                 row.appendChild(price_container);
 
                 // putting the rows to the table body
                 cart_items_container.appendChild(row);
                 console.log(cart_items_container);
+
+                 // Function to calculate and update total price
+                function calculateTotal() {
+                    let total = 0;
+                    const rows = document.querySelectorAll(".cart-container table tbody tr");
+                    console.log(checkBox.checked);
+
+                    if (rows ){
+                        rows.forEach(row => {
+                            const checkBox = row.querySelector(".check-box");
+                            const price_container = row.querySelector(".price");
+                            const amount = row.querySelector(".amount-tag");
+                            console.log(amount);
+                            if (price_container && checkBox.checked && amount) {
+                                const price = parseFloat(amount.textContent);
+                                total += price;
+                                console.log(price);
+                            }
+                            
+                        });
+                    }
+                    const total_amount = document.querySelector(".total-amount-tag");
+                    if (total_amount) {
+                        total_amount.textContent = `${total.toFixed(2)}`;
+                    }
+                }
 
                 calculateTotal();
 
@@ -112,12 +139,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         if (target.classList.contains("minus-button") || target.classList.contains("plus-button")) {
 
                             let current_value = parseInt(input.value);
+                            console.log(current_value)
             
                             if (!isNaN(current_value)) {
-                                if (target.classList.contains("minus-button") && current_value > 1) {
+                                if (target.classList.contains("minus-button") && current_value > 1 && checkBox.checked) {
                                     current_value--;
 
-                                } else if (target.classList.contains("plus-button")) {
+                                } else if (target.classList.contains("plus-button")&& checkBox.checked) {
                                     current_value++;
                                 }
     
@@ -125,40 +153,42 @@ document.addEventListener("DOMContentLoaded", function() {
                                 input.value = current_value;
     
                                 // Update price
-                                price_container.textContent = `Rs. ${product.price * current_value}.00`;
+                                const amount = row.querySelector(".amount-tag"); 
+                                amount.textContent = `${product.price * current_value}`;
     
                                 // Recalculate total price
                                 calculateTotal();
                             }
                         }
                     });
+                    checkBox.addEventListener('change', calculateTotal);
+
+                    const sum_total = document.querySelector(".total-amount-tag");
+                    const check_out_btn = document.getElementById("buy-now");
+                    console.log(sum_total.outerHTML);
+
+                    check_out_btn.addEventListener("click",function(event){
+
+                        console.log(typeof(sum_total.textContent));
+
+                        if ((sum_total.textContent!="0.00")){    
+                            const final_prize = encodeURIComponent(sum_total.textContent);
+                            window.location.href = `../content/checkout.html?price=${final_prize}`;
+                        }
+                })
                 },200)
                 
             }
 
             // Create rows for each item in cartData
+            let number = 1;
             for (const [title, quantity] of Object.entries(cart_data)) {
-                create_row(title, quantity);
+                number ++
+                create_row(title, quantity,number);
+                
             }
 
-            // Function to calculate and update total price
-            function calculateTotal() {
-                let total = 0;
-                const rows = document.querySelectorAll(".cart-container table tbody tr");
-
-                rows.forEach(row => {
-                    const priceCell = row.querySelector(".price");
-                    if (priceCell) {
-                        const price = parseFloat(priceCell.textContent.replace("Rs. ", ""));
-                        total += price;
-                    }
-                });
-
-                const totalAmountTag = document.querySelector(".total-amount-tag");
-                if (totalAmountTag) {
-                    totalAmountTag.textContent = `${total.toFixed(2)}`;
-                }
-            }
+           
         })
         .catch(error => console.error('Error fetching content.json:', error));
 });

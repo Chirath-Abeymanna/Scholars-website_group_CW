@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+
     let content = document.querySelector('.content');
     let logo = document.querySelector('.logo');
     let mission_topic = document.querySelector('.topic');
@@ -6,9 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let team = document.querySelector('.team');
     let profile = document.querySelector('.profile');
     let profile_details = document.querySelectorAll('.profile_details'); 
+    let loader = document.querySelector('.loader');
     
 
-    const observerOptions = {
+    const observer_options = {
         threshold: 0.1
     };
 
@@ -20,9 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 entry.target.classList.add('fade');
             }
         });
-    }, observerOptions);
+    }, observer_options);
 
     observer.observe(logo);
+    observer.observe(loader);
 
     setTimeout(() => {
         observer.observe(mission_topic); 
