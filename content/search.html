@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Scholars - Search results</title>
+        <link rel="stylesheet" href="../css/main_style.css">
+        <link rel="stylesheet" href="../css/shop_style.css">
+        <link rel="icon" href="../img/logo-title.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body >
+
+        <div class="header">
+            <img src="../img/logo.svg" alt="">
+
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="../Home.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="../profile.html" class=""><i class="fa-solid fa-circle-user"></i> Profile</a></li>
+                    <li><a href="../gallery.html" class=""><i class="fa fa-images"></i> Gallery</a></li>
+                    <li><a href="../shop.html" class=""><i class="fa fa-shop"></i> Shop</a></li>
+                    <li><a href="../team.html" class=""><i class="fa-solid fa-users"></i> Our Team</a></li>
+                    <li><a href="../feedback.html" class=""><i class="fa-solid fa-clipboard"></i> Make us better</a></li>
+                    <img src="../img/moon.png" alt="" id="theme">
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="section-0">     
+            <h2 id="search">Search results</h2>
+            <div class="cart">
+                <i class="fa fa-shopping-cart"></i>
+                <div class="item-number">
+                    <p>0</p>
+                </div>
+                <p> Cart</p>
+            </div>
+        </div>
+
+        <div class="section-1" id="search-section">
+            <div class="pro-container">
+                <template id="data-content">
+                    <div class="card">
+                    <div class="product">  
+                        <div class="image">
+                            <div id="image-1">
+                                <img src="" alt="" id="img1">
+                            </div>
+                            <div id="image-2">
+                                <img src="" alt="" id="img2">
+                            </div>
+                        </div>
+                            <div class="description">
+                                <span id="type"></span>
+                                <h5></h5>
+                                <h6></h6>
+                                <div class="stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <h4> Rs. <span id="amount"></span></h4>
+                                <div id="purchase" class="buy-now">
+                                    <button id="buy-now" class="buy-btn">buy now</button>
+                                    <p>+ <span id="number">0</span></p>
+                                    <div class="cart-sub"><button id="cart-anchor"><i class="fa fa-shopping-cart" id="cart-icon"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </template>
+            </div>
+        </div>
+
+        <h3 id="no-search-results"><i class="fa-solid fa-face-frown"></i> <br><br>No items found under this name</h3>
+    
+    <script src="../scripts/theme_content.js"></script>
+    <script src="../scripts/search.js"></script>
+    </body>
+</html>

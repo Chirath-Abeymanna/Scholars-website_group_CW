@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <link rel="icon" href="../img/logo-title.png" type="image/x-icon">
+        <title>Scholars - checkout</title>
+        <link rel="stylesheet" href="../css/main_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../css/checkout.css">
+    </head>
+    <body>
+        
+        <div class="background"></div>
+        <div class="body">
+
+        <div class="checkout-form-container">
+            <button id="back-arrow"><i class="fa fa-arrow-left"></i></button>
+                <h2>CHECKOUT FORM</h2>
+            
+            <div class="hr-tag">
+                <hr>
+            </div>
+            
+            <form action="" class="personal-details-form">
+                    
+                    <div class="personal-details-containter">
+
+                        <label id="sub-title">Personal details</label>
+                        <br>
+                        <label id="f-name">First Name :</label>
+                        <label id="l-name">Last Name :</label>
+                        <br>
+
+                        <div id="input-fields" class="first-name">
+                            <input type="text" id="First-Name" required placeholder="First Name">
+                            <span class="f-error" id="error">This field is required</span>
+                            <input type="text" id="Last-Name" required placeholder="Last Name">
+                            <span class="l-error" id="error">This field is required</span>
+                        </div>
+                        
+                        <label id="email-label">Email Address :</label>
+
+                        <div id="input-fields" class="email">
+                            <input type="email" id="email" placeholder="example@gmail.com">
+                            <span class="e-error" id="error">This field is required</span>
+                        </div>
+
+                        <label id="phone">Phone number: </label>
+
+                        <div id="input-fields" class="email">
+                            <input type="text" id="p-number" placeholder="xxx xxx xxxx">
+                            <span class="e-error" id="error">This field is required</span>
+                        </div>
+
+                        <button type="submit" id="next-personal-button">next</button>
+                    </div>
+                </form>
+                <form action="" class="address-form">
+
+                    <label id="sub-title">Billing address details</label>
+
+                    <label id="address-label1">Address Lane 1: </label>
+                    <br>
+
+                    <div id="input-fields" class="email">
+                        <input type="text" id="address-input" placeholder=" Lane 1" required>
+                        <span class="address-error" id="error">This field is required</span>
+                    </div>
+
+                    <label id="address-label2">Address Lane 2:</label>
+                    
+                    <div id="input-fields" class="email">
+                        <input type="text" id="address-input1" placeholder=" Lane 2" required>
+                        <span class="address-error1" id="error">This field is required</span>
+                    </div>
+                    <label id="address-label3">Address Lane 3:</label>
+                    
+                    <div id="input-fields" class="email">
+                        <input type="text" id="address-input2" placeholder=" Lane 3" required>
+                        <span class="address-error2" id="error">This field is required</span>
+                    </div>
+                    <label id="city">City:</label>
+                    <label id="p-code-l">Postal code:</label>
+                    <div id="input-fields" class="city & p-code">
+                        <input type="text" id="city-input" placeholder="City" required>
+                        <span class="c-error" id="error">This field is required</span>
+                        <input type="text" id="p-code" placeholder="" required>
+                        <span class="p-code-error" id="error">This field is required</span>
+                    </div>
+                    <label for="country" id="country-label">Select your country:</label>
+
+                        <select id="country" name="country">
+                            <option value="SL">Sri Lanka</option>
+                            <option value="IN">India</option>
+                            <option value="USA">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="AU">Australia</option>
+                            <option value="JP">Japan</option>
+                        </select>
+                        <br>
+                    <button type="submit" id="next-address-button">next</button>
+
+                </form>
+                <form action="" class="card-details-form">
+                    <label id="sub-title">Card details</label>
+                    
+                    <img src="../img/chirath/checkout/visa.png" alt="">
+                    <br>
+                    <label id="card-num">Card Number :</label>
+                    <div id="input-fields" class="card">
+                        <input type="text" id="c-num" required placeholder="xxxx-xxxx-xxxx-xxxx">
+                        <span class="c-num" id="error">This field is required</span>
+                    </div>
+                    <label for="" id="card-holder-label">Card holder</label>
+                    
+                    <div id="input-fields" class="card">
+                        <input type="text" id="card-holder" required placeholder="Enter the card name">
+                        <span class="c-holder" id="error">This field is required</span>
+                    </div>
+                    <label for="" id="exp-d-label">Expiration date :</label>
+                    <label for="" id="cvc-label">CVC :</label>
+                    <div id="input-fields" class="city & p-code">
+                        <input type="text" id="exp-d" placeholder="MM/YY">  
+                        <span class="exp-error" id="error">This field is required</span>
+                        <input type="text" id="cvc">
+                        <span class="cvc-error" id="error">This field is required</span>
+                    </div>
+                    <br>
+                    <button id="submit-btn" ><i class="fa-solid fa-credit-card"></i> &nbsp;&nbsp;&nbsp;Pay Rs. <span class="total-amount"></span></button>
+
+            </form>
+        </div>
+        </div>
+        <div class="feedback">
+            <div id="success-symbol">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>The order purchased Successfully</h3>
+            <a href="../shop.html"><button id="shop">Go to shop</button></a>
+            
+        </div>
+
+        <script src="../scripts/checkout.js"></script>
+    </body>
+</html>
