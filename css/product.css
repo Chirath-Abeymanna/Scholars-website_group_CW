@@ -54,12 +54,15 @@ body{
 }
 .product-section .selected-product img{
         position: relative;
-        padding-top: 5%;
+        padding-top: 0%;
         right: 0%;
         width: 100%;
         max-width: 400px;
+        margin-right: 5rem;
         height: auto;
         max-height: 350px;
+        padding-left: 2rem;
+        
 }
 
 .product-section .selected-product .description{
@@ -169,22 +172,8 @@ body{
     border-radius: 20px;
     background-color: rgba(36, 199, 253, 0.8);
     cursor: pointer;
-    margin-right: 3rem;
+    margin-left: 7rem;
 }
 .product-section .buttons #buy-now:hover,.product-section .buttons #cart:hover{
     background-color: #2fb6d1;
-}
-
-.product-section .buttons #cart{
-    font-family: 'poppins';
-    font-weight: 500;
-    cursor: pointer;
-    color: white;
-    border: none;
-    outline: none;   
-    width: 120px;
-    height: 40px;
-    border-radius: 20px;
-    line-height: 40px;
-    background-color: rgba(36, 199, 253, 0.8);
 }

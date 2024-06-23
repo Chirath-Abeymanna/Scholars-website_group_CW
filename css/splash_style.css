@@ -50,9 +50,29 @@ body{
 }
 
 /* Creating the styles and animations for website title */
+
+
 .quote-container {
     position: relative;
     padding-top: 10px;
+}
+
+.loader{
+    display: flex;
+    right: 0;
+    position: fixed;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    opacity: 0;
+    width: 80px;
+    transform: translateY(0px);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.active.loader{
+    transform: translateY(0); 
+    opacity: 1;
+    
 }
 
 .logo {
@@ -140,11 +160,19 @@ body{
 }
 .S1{
     object-fit: cover;
-    object-position: center -80px;
+    object-position: center 0px ;
+}
+.S2{
+    object-fit: cover;
+    object-position: center -20px;
 }
 .S3 {
     object-fit: cover;
-    object-position: center  -10px;
+    object-position: center  -23px;
+}
+.S4{
+    object-fit: cover;
+    object-position: center 1px;
 }
 .profile_details{
     font-size: medium;
@@ -182,11 +210,12 @@ body{
 
 .S3 p {
     margin-top: -30px;
+    margin-right: 2.2rem;
     padding: 10px 0px 10px 60px ;
 }
 
 .S3 p:nth-child(2) {
-    margin-left: 10%;
+    margin-left: 2rem;
 }
 .S3 p:not(:last-child) {
     margin-bottom: 10px;
@@ -194,10 +223,11 @@ body{
 
 .S4 p {
     margin-top: -30px;
-    padding: 10px 0px 10px 30px ;
+    margin-right: 1rem;
+    padding: 10px 0px 10px 00px ;
 }
 .S4 p:nth-child(2) {
-    margin-left: 20%;
+    margin-left: 1.2rem;
 }
 .S4 p:not(:last-child) {
     margin-bottom: 10px;
