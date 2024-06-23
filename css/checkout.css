@@ -1,0 +1,397 @@
+@font-face {
+    font-family: 'poppins-r';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+:root{
+    --background-color: rgb(231, 240, 248);
+    --font-color: #1a1a1a;
+    --seperator-color: rgba(0, 0, 0, 0.06);
+    --theme-shadow-color: inset 0px 0px 10px 10px rgba(198, 222, 11, 0.15),0px 0px 20px 20px rgba(198, 222, 11, 0.25);
+    --box-shadow-color-normal: rgba(0,0,0,0.1);
+    --box-shadow-color-hover: rgba(0,0,0,0.3);
+}
+
+.dark-theme{
+
+    --background-color: #010101;
+    --font-color: rgb(231, 240, 248);
+    --seperator-color: rgba(188, 188, 188, 0.09);
+    --theme-shadow-color: inset 10px 20px 0px 0px rgba(231, 240, 248, 0.09),0px 0px 20px 20px rgba(231, 240, 248, 0.20);
+    --box-shadow-color-normal: rgba(255, 255, 255, 0.1);
+    --box-shadow-color-hover: rgba(255, 255, 255, 0.18);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'poppins';
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    background: url(../img/chirath/checkout/background.jpg);
+    object-fit: contain ;
+    overflow: visible;
+    
+    
+}
+
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(12px);
+    z-index: 1; 
+}
+.body{
+    display: flex;
+    justify-content: center;
+}
+
+.feedback{
+    position: relative;
+    display: none;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 30rem;
+    height: 20rem;
+    background-color: white;
+    box-shadow: 20px 5px 10px  var(--box-shadow-color-normal);
+    z-index: 1;
+}
+h3{
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+#shop{
+    font-family: 'poppins';
+    font-weight: 500;
+    color: white;
+    width: 100px;
+    height: 30px;
+    margin-left: 20rem;
+    background-color:  rgba(36, 199, 253, 0.8);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+#shop:hover{
+    background-color: #2fb6d1;
+}
+
+#success-symbol{
+    padding-top: 1rem;
+    font-size: 10rem;
+    color: greenyellow;
+}
+
+.checkout-form-container {
+    position: relative;
+    opacity: 1;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    max-width: 30rem;
+    height: 33rem;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin-top: 10rem;
+    justify-content: center;
+    box-shadow: 20px 5px 10px  var(--box-shadow-color-normal);
+    z-index: 2;
+}
+
+h2{
+    position: absolute;
+    top: 1.3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    
+}
+#back-arrow{
+    position: absolute;
+    margin-top: 1.5rem;
+    margin-right: 25rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    background-color: #010101;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+hr{
+    width: 28rem;
+    position: absolute;
+    margin-top: 4.5rem;
+    margin-left: 0.2rem;
+    margin-right: auto;
+}
+.checkout-form-container form{
+    position: relative;
+    display: inline-block;
+    margin-top: 5rem;
+    padding-left: 0.5rem;
+}
+input{
+    height: 28px;
+    font-size: 1.1rem;
+    border: 2px solid #BBB9B9 ;
+    border-radius: 2px;
+}
+
+input::placeholder{
+    color:#D9D9D9;
+}
+
+form img{
+    width:60px;
+    margin-top: 1rem;
+    margin-left: 24rem;
+}
+
+#Sub-title{
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 0.8rem;  
+}
+
+#input-fields{
+    position: relative;
+}
+
+#error{
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    color: red;
+    top: 3rem;
+}
+
+.input-error{
+    border-color: red;
+}
+
+/* styling personal details form */
+#personal-details-form{
+    display: block;
+}
+
+#f-name, #l-name{
+    position: absolute;
+    padding-top: 1.2rem;
+}
+
+#l-name{
+    left: 15.5rem;
+}
+
+#first-name, #last-name{
+    margin-top: 1.5rem;
+    
+}
+
+.f-error{
+    right: 18.1rem;
+}
+
+#last-name{
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    width: 13rem;
+}
+
+.l-error{
+    margin-left: 15rem;
+}
+
+#email-label{
+    position: absolute;
+    margin-top: 1rem;
+}
+
+#email{
+    margin-top: 2.5rem;
+    width: 280px;
+}
+
+.e-error{
+    position: relative;
+    margin-top: 1rem;
+}
+#phone{
+    position: absolute;
+    margin-top: 1rem;
+}
+
+#p-number{
+    margin-top:2.5rem;
+}
+
+#next-personal-button{
+    position: relative;
+    margin-left: 22rem;
+    margin-top:1.5rem ;
+    width: 5rem;
+}
+
+/* Styling address form */
+
+#address-form{
+    display: block;
+    position: relative;
+    
+}
+#address-label1{
+    position: absolute;
+    margin-top: 3rem;
+}
+#address-label2,#address-label3{
+    position: absolute;
+    margin-top: 0.5rem;
+}
+#address-input1,#address-input2,#address-input{
+    margin-bottom: 0.5rem;
+    width: 20rem;
+}
+#address-input{
+    margin-top: 3rem;
+}
+.address-error{
+    margin-top: 1.5rem;
+}
+#address-input1,#address-input2{
+    margin-top: 2rem;
+}
+.address-error1,.address-error2{
+    margin-top: 0.5rem;
+}
+
+#city,#p-code-l{
+    position: absolute;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#p-code-l{
+    margin-left: 18rem;
+}
+#city-input{
+    margin-top: 2.5rem;
+    width: 10rem;
+}
+
+.c-error{
+    margin-top: 1.1rem;
+    
+}
+#p-code{
+    margin-left: 7.8rem;
+    width: 5rem;
+}
+.p-code-error{
+    margin-top: 1.1rem;
+    margin-left: 18rem;
+}
+#country{
+    margin-top: 2rem;
+}
+
+#next-address-button{
+    margin-top: 4rem;
+    position: relative;
+    opacity: 1;
+    bottom: 2rem;
+    margin-left: 23rem;
+    right: 1rem;
+    width: 5rem;
+}
+
+/* styling the cart form */
+
+#card-details-form{
+    display: block;
+}
+
+#card-num{
+    position: absolute;
+    margin-top: 1rem;
+}
+#c-num{
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+.c-num{
+    margin-top: 1rem;
+}
+#card-holder-label{
+    position: absolute;
+    margin-top: 0.2rem;
+}
+#card-holder{
+    margin-top: 1.8rem;
+}
+.c-holder{
+    margin-top: 0.5rem;
+}
+
+#exp-d-label, #cvc-label{
+    position: absolute;
+    margin-top: 1.5rem;
+}
+#cvc-label{
+    margin-left: 15rem;
+}
+
+#exp-d, #cvc{
+    margin-top: 3rem;
+    width: 5rem;
+}
+.exp-error{
+    left: 0rem;
+    margin-top: 1.6rem;
+}
+#cvc{
+   margin-left: 9.7rem; 
+}
+
+.cvc-error{
+    right: 3rem;
+    margin-top: 1.6rem;
+}
+form button{
+    height: 35px;
+    width: 98%;
+    margin-right: 1rem;
+    font-family: 'poppins-r';
+    color: white;
+    background-color:  rgba(36, 199, 253, 0.8);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+
+}
+
+form button:hover{
+    background-color: #2fb6d1;
+}
+
