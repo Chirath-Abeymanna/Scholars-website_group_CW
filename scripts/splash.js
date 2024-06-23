@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 4000);
 
     setTimeout(()=>{
-        window.location.href = "../Home.html";
+        window.location.href = "Home.html";
     },4800);
 
 });
