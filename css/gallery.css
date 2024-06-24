@@ -1,0 +1,92 @@
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery_box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: auto;
+    background-color: #000000;
+    border-radius: 15px;
+}
+
+
+.gallery_item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery_item img {
+    width: auto;
+    height: auto;
+    display: block;
+    transition: transform 2s;
+}
+
+.gallery_item:hover img {
+    transform: scale(1.2);
+}
+
+.gallery_item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.gallery_item:hover .caption {
+    opacity: 1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay:target {
+    display: flex;
+}
+
+.overlay img {
+    max-width: 1000%;  /* Adjust this value to increase image size */
+    max-height: 1000%; /* Adjust this value to increase image size */
+    width: 50%;
+    height: 50%;
+}
+
+.description {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    max-width: 40%;
+    margin-left: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+}
