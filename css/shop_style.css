@@ -27,20 +27,13 @@
 }
 
 :root{
-    --background-color: rgb(231, 240, 248);
-    --font-color: #1a1a1a;
-    --seperator-color: rgba(0, 0, 0, 0.06);
-    --theme-shadow-color: inset 0px 0px 10px 10px rgba(198, 222, 11, 0.15),0px 0px 20px 20px rgba(198, 222, 11, 0.25);
+    
     --box-shadow-color-normal: rgba(0,0,0,0.1);
     --box-shadow-color-hover: rgba(0,0,0,0.3);
 }
 
 .dark-theme{
 
-    --background-color: #010101;
-    --font-color: rgb(231, 240, 248);
-    --seperator-color: rgba(188, 188, 188, 0.09);
-    --theme-shadow-color: inset 10px 20px 0px 0px rgba(231, 240, 248, 0.09),0px 0px 20px 20px rgba(231, 240, 248, 0.20);
     --box-shadow-color-normal: rgba(255, 255, 255, 0.1);
     --box-shadow-color-hover: rgba(255, 255, 255, 0.18);
 
@@ -68,7 +61,6 @@ h2{
     position: relative;
     font-family: 'Bebas_Neue';
     background: linear-gradient(90deg,#02e9fe, #1359bc,#02e9fe);
-    /* background-repeat: no-repeat; */
     -webkit-background-clip: text ;
     -webkit-text-fill-color: rgba(18, 62, 125, 0.5);   
     animation: animate 10s linear infinite;
