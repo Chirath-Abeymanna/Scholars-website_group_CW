@@ -2,16 +2,14 @@
    font-family: 'poppins';
    src: url("../fonts/Poppins/Poppins-Regular.ttf");
 }
- body{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
 
- }
  .container{
    outline: none;
    font-family: 'poppins',sans-serif;
+   display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     width: 30px;
     background: #fff;
     border-radius:  5px;

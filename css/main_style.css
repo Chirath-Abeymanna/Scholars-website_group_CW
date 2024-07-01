@@ -2,16 +2,24 @@
     font-family: 'Spartan';
     src: url('../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
 
 :root{
     --background-color: rgb(231, 240, 248);
+    --scroll-bar-background-color: #ababab;
+    --scroll-bar-font-color:#1a1a1a;
     --font-color: #1a1a1a;
     --seperator-color: rgba(0, 0, 0, 0.06);
     --theme-shadow-color: inset 0px 0px 10px 10px rgba(198, 222, 11, 0.15),0px 0px 20px 20px rgba(198, 222, 11, 0.25);
 }
 .dark-theme{
 
-    --background-color: #010101;
+    --background-color: #0d0d13;
+    --scroll-bar-background-color:rgb(231, 240, 248);
+    --scroll-bar-font-color:#ababab;
     --font-color: rgb(231, 240, 248);
     --seperator-color: rgba(188, 188, 188, 0.09);
     --theme-shadow-color: inset 10px 20px 0px 0px rgba(231, 240, 248, 0.09),0px 0px 20px 20px rgba(231, 240, 248, 0.20);
@@ -21,16 +29,17 @@
 ::-webkit-scrollbar{
     width: 12px;
     border-radius: 1.2rem;
-    background-color: #ababab;
+    background-color: var(--scroll-bar-background-color);
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: var(--font-color);
+    background-color: var(--scroll-bar-font-color);
     height: 30%;
     border-radius: 1.2rem;
 }
 
 body{
+    font-family: 'Spartan','poppins',sans-serif;
     width: 100%;
     margin: 0;
     padding: 0;
