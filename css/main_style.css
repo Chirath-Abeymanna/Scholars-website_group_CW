@@ -2,6 +2,10 @@
     font-family: 'Spartan';
     src: url('../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
 
 :root{
     --background-color: rgb(231, 240, 248);
@@ -35,6 +39,7 @@
 }
 
 body{
+    font-family: 'Spartan','poppins',sans-serif;
     width: 100%;
     margin: 0;
     padding: 0;
