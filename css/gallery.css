@@ -82,8 +82,8 @@ h1 {
 }
 
 .overlay img {
-    max-width: 1000%;  /* Adjust this value to increase image size */
-    max-height: 1000%; /* Adjust this value to increase image size */
+    max-width: 1000%;  
+    max-height: 1000%; 
     width: 50%;
     height: 50%;
 }
