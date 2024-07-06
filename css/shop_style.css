@@ -209,7 +209,7 @@ button {
     width: 97%;
     padding: 1rem;
     max-width: 2000px;
-    height: 30rem;
+    height: 70vh;
     position: relative;
     overflow-x: hidden;
 }
@@ -243,7 +243,7 @@ button {
 .list img {
     width: 150vw;
     max-width: 100vw;
-    height: 29rem;
+    height: 62vh;
     margin-left: -20px;
     padding-right: 10px;
     justify-content: space-around;
@@ -286,7 +286,7 @@ button {
 
 .Top-sellers .dots{
     position: absolute;
-    bottom: 8%;
+    bottom: 15%;
     left: 0;
     color: #fff;
     width: 100%;
