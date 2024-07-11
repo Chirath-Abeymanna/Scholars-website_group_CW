@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     
                         const target = event.target;
     
-                        
+                        //Changing the price value in the price coloumn using buttons
                         if (target.classList.contains("minus-button") || target.classList.contains("plus-button")) {
 
                             let current_value = parseInt(input.value);
@@ -154,12 +154,30 @@ document.addEventListener("DOMContentLoaded", function() {
     
                                 // Update price
                                 const amount = row.querySelector(".amount-tag"); 
-                                amount.textContent = `${product.price * current_value}`;
+                                amount.textContent = `${(product.price * current_value).toFixed(2)}`;
     
                                 // Recalculate total price
                                 calculateTotal();
                             }
                         }
+                        //Calculating the price change when it done using the input field
+                        input.addEventListener("input",function(event){
+                            
+                            let current_value = parseInt(input.value);
+
+                            if (!isNaN(current_value) && checkBox.checked && current_value >0){
+
+                                //update the price
+                                const amount = row.querySelector(".amount-tag"); 
+                                amount.textContent = `${(product.price * current_value).toFixed(2)}`;
+
+                                // Recalculate total price
+                                calculateTotal();
+                            }
+                            if (isNaN(current_value)){
+                                input.value = "1";
+                            }
+                        })
                     });
                     checkBox.addEventListener('change', calculateTotal);
 
