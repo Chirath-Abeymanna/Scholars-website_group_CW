@@ -2,6 +2,10 @@
     font-family: 'Spartan';
     src: url('../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
 
 :root{
     --background-color: rgb(231, 240, 248);
@@ -35,6 +39,7 @@
 }
 
 body{
+    font-family: 'Spartan','poppins',sans-serif;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -55,7 +60,7 @@ body{
     outline: none;
 }
 
-.header {
+header {
     width: 100%;
     display: flex;
     font-family: 'Spartan',sans-serif;
@@ -71,7 +76,7 @@ body{
     top: 0;
     left: 10px;
 }
-.header img{
+header img{
     width: 100%;
     max-width: 150px;
     max-height: 60px;
@@ -79,17 +84,17 @@ body{
     cursor: pointer;
 }
 
-.nav-bar ul{
+nav ul{
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
-.nav-bar ul li{
+nav ul li{
     list-style: none;
     padding: 0.2rem 1rem;
 }
-.nav-bar ul li a{
+nav ul li a{
     display: inline-block;
     text-decoration: none;
     font-size: 1.3rem;
@@ -100,12 +105,12 @@ body{
 
 }
 
-.nav-bar ul li :hover,
-.nav-bar ul li a.active{
+nav ul li :hover,
+nav ul li a.active{
     color: rgb(8, 151, 194);
 }
 
-.nav-bar ul li a.active::after{
+nav ul li a.active::after{
     content: "";
     width: 50%;
     height: 3px;
@@ -115,7 +120,7 @@ body{
     bottom: -8px;
     left: 0;
 }
-.nav-bar ul li a::after{
+nav ul li a::after{
     content: "";
     width: 0%;
     height: 3px;
@@ -127,6 +132,6 @@ body{
     transition: width 0.3s ease;
 }
 
-.nav-bar ul li :hover::after{
+nav ul li :hover::after{
     width: 100%;
 }
