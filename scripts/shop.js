@@ -1,6 +1,6 @@
 let slider = document.querySelector('.Top-sellers .list');
 let items = document.querySelectorAll('.Top-sellers .list .item');
-let img_tag = document.querySelectorAll('.Top-sellers .list button');
+let img_tag = document.querySelectorAll('.Top-sellers .list button[name]');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let dots = document.querySelectorAll('.Top-sellers .dots li');
@@ -33,9 +33,9 @@ function reloadSlider(){
 
 }
 img_tag.forEach((button)=>{
-    console.log(button)
-    let img = button.id;
-    console.log(img)
+    console.log(button.outerHTML)
+    let img = button.getAttribute("name");
+    console.log(img);
     button.addEventListener('click',()=>{
         let title = encodeURIComponent(img);
         window.location.href = `../content/product.html?title=${title}`;
@@ -58,7 +58,6 @@ search_btn.addEventListener('click',(event)=>{
     event.preventDefault()
 
     search_item_value = search_bar.value;
-    console.log(search_item_value);
     const search_items = encodeURIComponent(search_item_value);
     window.location.href = `content/search.html?search=${search_items}`;
 })
@@ -89,8 +88,6 @@ document.addEventListener("DOMContentLoaded", function() {
             // updating the elements with data
             image[0].src = product.img;
             image[0].alt = title;
-            image[1].src = product.img2;
-            image[1].alt = title;
             description_type.textContent = product.type;
             description_h5.textContent = title;
             description_h6.textContent = product.author;

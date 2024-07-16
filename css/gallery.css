@@ -89,17 +89,18 @@ h2 {
 .overlay img {
     max-width: 1000%;  
     max-height: 1000%; 
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
 }
 
 .description {
     background-color: #000000;
     color: #fff;
-    text-align: center;
-    margin-top: 20px;
-    max-width: 40%;
-    margin-left: 20px;
+    text-align: justify;
+    margin-top: 400px;
+    max-width: 50%;
+    margin-left: 10px;
+    
 }
 
 .close {

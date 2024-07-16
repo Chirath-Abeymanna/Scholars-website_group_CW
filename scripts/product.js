@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     .then(data => {
         const product = data[productTitle];
         if (product) {
+            
             // Populate the template with the product data
             const template = document.querySelector(".product-section template").content;
             const clone = template.cloneNode(true);
