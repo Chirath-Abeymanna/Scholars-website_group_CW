@@ -144,7 +144,7 @@ footer {
     font-family: Arial, sans-serif;
 }
 
-footer h2 {
+footer h3 {
     color: white;
 }
 
@@ -155,7 +155,7 @@ footer h2 {
     margin: 0 auto;
 }
 
-.footer-name h2 {
+.footer-name h3 {
     margin: 0;
     font-size: 24px;
 }
