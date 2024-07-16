@@ -1,5 +1,5 @@
 var theme = document.getElementById("theme");
-let logo_img = document.querySelector(".header img")
+let logo_img = document.querySelector("header img")
 console.log(logo_img);
 
 // Function to toggle the theme

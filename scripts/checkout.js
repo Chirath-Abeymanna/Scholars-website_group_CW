@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Getting cart data from URL query parameters
     const urlParams = new URLSearchParams(window.location.search);
     const sum_total = urlParams.get('price');
-    console.log(Number.isInteger(sum_total));
+    const productDetails = JSON.parse(urlParams.get('object'));
 
     const amount_tag = document.querySelector(".total-amount");
 
@@ -46,6 +46,22 @@ document.addEventListener("DOMContentLoaded", function() {
             if (!input.value.trim()) {
                 error.style.opacity = "1";
                 valid = false;
+            }
+            //checking the email validation
+            else if (input.id == "email"){
+                    if (!input.value.includes("@")){
+                            error.innerHTML = "Email is not under proper format MUST have - (@ .)"
+                            error.style.opacity = "1";
+                            valid = false;
+                    }
+                    else {
+                        let seperator = input.value.split("@");
+                        if (!seperator[1].includes(".")){
+                            error.innerHTML = "Email is not under proper format MUST have - (.)"
+                            error.style.opacity = "1";
+                            valid = false;
+                        }
+                    }
             }
             else{
                 error.style.opacity = "0";
@@ -92,11 +108,19 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    //Showing the feedback form after sumbit button
     submit_btn.addEventListener('click',function(event){
         event.preventDefault();
 
-        
         if (validateForm(card_form)) {
+
+            for (const [title, quantity] of Object.entries(productDetails)) {
+                
+                const p = document.createElement('p');
+                p.textContent = `${title} x ${quantity}`;
+                feedback_containter.insertBefore(p, document.getElementById('total-price'));
+            }
+            document.getElementById("total-price").textContent = `Total amount paid: Rs. ${parseFloat(sum_total).toFixed(2)}`
 
             background.style.display = "none";
             feedback_containter.style.display = "inline-block";

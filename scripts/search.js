@@ -53,8 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 // updating the elements with data
                 image[0].src = image_location;
-                image[0].alt = title;
-                image[1].alt = title;
                 description_type.textContent = product.type;
                 description_h5.textContent = title;
                 description_h6.textContent = product.author;
