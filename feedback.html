@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Scholars - Feedback</title>
         <link rel="stylesheet" href="css/main_style.css">
+        <link rel="stylesheet" href="css/feedback.css">
         <link rel="icon" href="img/logo-title.png" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
@@ -24,7 +25,80 @@
                 </ul>
             </nav>
         </header> 
+        <div class="form-container">
+            <h2>Hey There.. Help Us Improve</h2>
+            <form id="feedbackForm">
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <div class="error" id="nameError"></div>
+                
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <div class="error" id="emailError"></div>
+                
+                <p>First time visiting?</p>
+                <input type="radio" name="firstVisit" value="yes" required> Yes
+                <input type="radio" name="firstVisit" value="no"> No
+                
+                <p>Was The Website Easy To Access?</p>
+                <input type="radio" name="informative" value="yes" required> Yes
+                <input type="radio" name="informative" value="no"> No
+                
+                <textarea id="improvements" placeholder="Suggest any improvements"></textarea>
+                
+                <p>How satisfied are you with our services? (1-10)</p>
+                <input type="number" id="satisfaction" min="1" max="10" required>
+                
+                <p>Would You Like To Reccommend Our Service?</p>
+                <select id="recommend" required>
+                    <option value="">Select an option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <p>Do You Like To Receive Newest Updates?</p>
+                <select id="updates" required>
+                    <option value="">Select an option</option>
+                    <option value="yes">Yes - via Email</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <textarea id="additionalComments" placeholder="Any additional comments?"></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    
+        
+        <script src="scripts/feedback.js"></script>
+        <script src="scripts/theme.js"></script>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-name">
+                    <h2>Scholars</h2>
+                    <p>Hey There!</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h3>Student 1</h3>
+                    </div>
+                    <div class="link-column">
+                        <h3>Student 2</h3>
+                    </div>
+                    <div class="link-column">
+                        <h3>Student 3</h3>
+                    </div>
+                    <div class="link-column">
+                        <h3>Student 4</h3>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p>&copy;Copyright. All rights reserved.</p>
+            </div>
+        </footer>
     
     <script src="scripts/theme.js"></script>
+    <script src="scripts/feedback.js"></script>
     </body>
 </html>
