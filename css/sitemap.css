@@ -1,0 +1,46 @@
+:root{
+    --background-color: rgb(231, 240, 248);
+    --font-color: #1a1a1a;
+    --seperator-color: rgba(0, 0, 0, 0.06);
+    --theme-shadow-color: inset 0px 0px 10px 10px rgba(198, 222, 11, 0.15),0px 0px 20px 20px rgba(198, 222, 11, 0.25);
+}
+.dark-theme{
+
+    --background-color: #010101;
+    --font-color: rgb(231, 240, 248);
+    --seperator-color: rgba(188, 188, 188, 0.09);
+    --theme-shadow-color: inset 10px 20px 0px 0px rgba(231, 240, 248, 0.09),0px 0px 20px 20px rgba(231, 240, 248, 0.20);
+
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    color: var(--font-color);
+}
+
+svg {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+.node {
+    fill: #e3f2fd;
+    stroke: #000000;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: fill 0.3s;
+}
+
+.node:hover {
+    fill: #7098c0;
+
+}
+.line {
+    stroke: #33a5bc;
+    stroke-width: 2px;
+}
+.text {
+    fill: #000000;
+    pointer-events: none;
+}
+
