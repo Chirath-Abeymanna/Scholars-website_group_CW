@@ -12,7 +12,7 @@
     src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
 }
 
-/* Creating a top seller animation */
+/* Creating a main topic animation */
 @keyframes animate {
     0%{
         background-position: -500%;
@@ -58,6 +58,7 @@ h2{
     position: relative;
     font-family: 'Bebas_Neue';
     background: linear-gradient(90deg,#02e9fe, #1359bc,#02e9fe);
+    background-clip: text;
     -webkit-background-clip: text ;
     -webkit-text-fill-color: rgba(18, 62, 125, 0.5);   
     animation: animate 10s linear infinite;

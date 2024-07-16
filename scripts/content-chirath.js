@@ -19,12 +19,11 @@ document.addEventListener("DOMContentLoaded",function(){
     const appearOnScroll = new IntersectionObserver
     (function(entries,appearOnScroll){
         entries.forEach(entry =>{
-            if(!entry.isIntersecting){
-                return;
+            if(entry.isIntersecting){
+                entry.target.classList.add("appear")
             }
             else{
-                entry.target.classList.add("appear");
-                appearOnScroll.unobserve(entry.target);
+                entry.target.classList.remove("appear");
             }
         });
     },appearOptions);

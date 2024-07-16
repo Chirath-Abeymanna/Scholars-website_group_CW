@@ -7,7 +7,7 @@
         transform: translateX(80%);
     }
     to{
-        transform: translateX(-150%);
+        transform: translateX(-140%);
     }
 }
 @keyframes animate {
@@ -77,6 +77,7 @@ body{
     position: relative;
     font-family: 'Bebas_Neue';
     background: linear-gradient(90deg,#02e9fe, #1359bc,#02e9fe);
+    background-clip: text;
     -webkit-background-clip: text ;
     -webkit-text-fill-color: rgba(18, 62, 125, 0.5);   
     animation: animate 10s linear infinite;

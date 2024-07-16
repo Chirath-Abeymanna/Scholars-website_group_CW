@@ -58,7 +58,6 @@ search_btn.addEventListener('click',(event)=>{
     event.preventDefault()
 
     search_item_value = search_bar.value;
-    console.log(search_item_value);
     const search_items = encodeURIComponent(search_item_value);
     window.location.href = `content/search.html?search=${search_items}`;
 })
