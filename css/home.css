@@ -1,0 +1,103 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    background-image: url('../img/Dulan/Background Image for FeedbackForm.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 10%;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.hero * {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.cta-button {
+    background-color: rgba(36, 199, 253, 0.8);
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.program-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.program-box {
+    width: 30%;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.program-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.program-content {
+    padding: 20px;
+}
+.program-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    padding: 10px;
+}
+.program-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.read-more {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: rgba(36, 199, 253, 0.8);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.program-box:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+#gallery { background-color: rgba(36, 199, 253, 0.8) }
+#team { background-color: rgba(36, 199, 253, 0.8) }
+#feedback { background-color: rgba(36, 199, 253, 0.8) }
