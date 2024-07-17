@@ -5,6 +5,7 @@ let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let dots = document.querySelectorAll('.Top-sellers .dots li');
 const product_template = document.querySelector("[data-content]"); 
+let productDetails = {};
 
 
 //Creating the functions for image slider in top sellers
@@ -66,6 +67,16 @@ search_btn.addEventListener('click',(event)=>{
 
 document.addEventListener("DOMContentLoaded", function() {
 
+
+    function gatherCartData() {
+        const cartItems = document.querySelectorAll(".cart-container table tbody tr");
+        cartItems.forEach(item => {
+            const title = item.querySelector(".title").textContent;
+            const quantity = parseInt(item.querySelector(".quantity-input").value);
+            productDetails[title] = quantity;
+        });
+    }
+
     fetch("json/content.json").then(response => response.json())
     .then(data => {
 
@@ -114,9 +125,12 @@ document.addEventListener("DOMContentLoaded", function() {
             button.addEventListener("click",function(event){
                 const container = this.closest(".product")
                 const price_tag = container.querySelector("#amount");
+                const title = container.querySelector("h5").textContent;
+                productDetails[title] = 1;
 
                 const price = encodeURIComponent(parseInt(price_tag.textContent));
-                window.location.href =`../content/checkout.html?price=${price}`;
+                const product_object = encodeURIComponent(JSON.stringify(productDetails));
+                window.location.href =`../content/checkout.html?price=${price}&object=${product_object}`;
 
                 console.log(Number.isInteger(price));
             })
