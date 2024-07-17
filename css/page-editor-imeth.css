@@ -2,44 +2,123 @@
     font-family: 'Spartan';
     src: url('../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
 }
-body{
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
     font-family: 'Spartan';
     background-color: #14131e;
-    color: rgb(0, 0, 0);
+    color: white;
     display: flex;
-    font-style: inherit;
 }
 
-.profile img{
+.container {
+    display: flex;
+    height: 750px;
+    width: 1500px;
+}
+
+.left-panel {
+    background-color: #14131e;
+    width: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.right-panel {
+    background-color: #21588c;
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
     position: relative;
-    top: 50px;
-    left: 50px;
-    width: 100%;
-    max-width: 160px;
-    height: auto;
-    aspect-ratio: 1 /1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center 0px;
+    margin-bottom: 50px; 
+    margin-top: 50px;
 }
 
-.profile .name{
-    position: relative;
-    left: 250px;
-    top: -150px;
-    font-size: 70px;
-    background-color: rgb(178, 179, 193);
-
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.box {
-    display: grid;
-    padding: 20px;
-    width: 500px;
-    height: 100px;
-    top: -600px;
-    left: 250px;
-    background-color: #b8b1b1;
+.profile .name {
+    font-size: 45px;
+    background-color: #15143b;
+    padding: 5px;
+    margin-top: 10px; 
 }
 
+.student-details p {
+    margin: 10px 0;
+    font-size: 20px;
+}
 
+.logo {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    max-width: 450px;
+    height: auto;
+}
+
+.content {
+    padding-top: 50px;
+}
+
+.content p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.link {
+    display: block;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #ff6347;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.link:hover {
+    background-color: #000000;
+}
+
+.gallerysitemap-link {
+    display: block;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #ff6347;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.gallerysitemap-link:hover {
+    background-color: #15143b;
+}
