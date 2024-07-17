@@ -44,3 +44,16 @@ svg {
     pointer-events: none;
 }
 
+.subnode {
+    fill: #4c83ab;
+    stroke: #000000;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: fill 0.3s;
+}
+
+.subnode:hover {
+    fill: #103f6f;
+
+}
+
