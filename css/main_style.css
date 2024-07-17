@@ -146,6 +146,7 @@ footer {
 
 footer h2 {
     color: white;
+    animation: none;
 }
 
 .footer-content {
