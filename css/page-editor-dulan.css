@@ -57,10 +57,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-.btn:hover{
-    background-color: white;
-}
-
 .btn {
     background-color: rgba(36, 199, 253, 0.8);
     color: white;
@@ -74,3 +70,8 @@ h1 {
     color: #666;
     margin-bottom: 20px;
 }
+
+.btn:hover {
+    background-color: aquamarine;
+}
+
