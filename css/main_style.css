@@ -34,6 +34,7 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
+    color: var(--font-color);
     background-color: var(--background-color);
     transition: background-color 0.3s ease;
     overflow-x: hidden;

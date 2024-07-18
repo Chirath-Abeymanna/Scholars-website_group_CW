@@ -2,7 +2,7 @@
     <head>
         <title>Scholars - Profile</title>
         <link rel="stylesheet" href="css/main_style.css">
-        <link rel="stylesheet" href="css/product.css">
+        <link rel="stylesheet" href="css/profile.css">
         <link rel="icon" href="img/logo-title.png" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
@@ -23,38 +23,127 @@
                 </ul>
             </div>
         </div>
-        <div class="container">
-            <header>Login Form</header>
-            <div class="form-outer">
-                <form action="#">
-                    <div class="page">
-                        <div class="title">Login info</div>
-                        <div class="field">
-                            <div class="label">name </div>
-                            <input type="text"
-                        </div>
-                        <div class="field">
-                            <div class="label">address </div>
-                            <input type="text"
-                        </div> 
-                        <div class="field">
-                            <div class="label">gender </div>
-                            <input type="text"
-                        </div>
-                        <div class="field">
-                            <div class="label">contact number </div>
-                            <input tyoe="number"
-                        <div class="field-btns">
-                            <button class="prev-1 prev">previous </button>
-                            <button class="next-1 next">next</button>
-                        </div>
-                        
+        <div class="box-a"> <!-- Box A -->
+            <div class="container">
+                <div id="startMessage" class="start-message">
+                    <h2>Press Start to create your user profile</h2>
+                </div>
+                <button id="startButton" onclick="start()">Start</button>
+                <div class="step" id="step1">
+                    <h2>Step 1: Personal Information</h2>
+                    <label>Enter your name: </label><br><br>
+                    <input type="text" id="nameInput" placeholder="Enter Name">
+                    <button onclick="goToSurname()">Next</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
+                <div class="step" id="step2">
+                    <h2>Step 2: Personal Information</h2>
+                    <label>Enter your surname: </label><br><br>
+                    <input type="text" id="surnameInput" placeholder="Enter Surname">
+                    <button onclick="goToAge()">Next</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
+                <div class="step" id="step3">
+                    <h2>Step 3: Personal Information</h2>
+                    <label>Enter your age: </label><br><br>
+                    <input type="text" id="ageInput" placeholder="Enter Age">
+                    <button onclick="goToGender()">Next</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
+                <div class="step" id="step4">
+                    <h2>Step 4: Personal Information</h2>
+                    <div class="form-group">
+                        <label for="genderInput">Gender:</label>
+                        <select id="genderInput">
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
-                </form>  
-            </div>   
-        </div>
+                    <div class="button-container">
+                        <button onclick="goToStep2()">Next</button>
+                        <button onclick="skipStep()">Skip</button>
+                    </div>
+                </div>
+                <div class="step" id="step5">
+                    <h2>Step 5: Volunteering Details</h2>
+                    <label>Rationale: </label><br><br>
+                    <input type="text" id="rationaleInput" placeholder="Enter Rationale">
+                    <button onclick="goToDateOfAvailability()">Next</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
+                <div class="step" id="step6">
+                    <h2>Step 6: Volunteering Details</h2>
+                    <label>Date of Availability: </label><br><br>
+                    <input type="text" id="doaInput" placeholder="Enter Date of Availability">
+                    <button onclick="goToTask()">Next</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
+                <div class="step" id="step7">
+                    <h2>Step 7: Volunteering Details</h2>
+                    <label>Task: </label><br><br>
+                    <input type="text" id="taskInput" placeholder="Enter Task">
+                    <button onclick="goToPlace()">Next</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
+                <div class="step" id="step8">
+                    <h2>Step 8: Volunteering Details</h2>
+                    <label>Place: </label><br><br>
+                    <input type="text" id="placeInput" placeholder="Enter Place">
+                    <button onclick="goToAssignmentType()">Next</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
+                <div class="step" id="step9">
+                    <h2>Step 9: Volunteering Details</h2>
+                    <label>Assignment Type: </label><br><br>
+                    <input type="text" id="assignmentTypeInput" placeholder="Enter Assignment Type">
+                    <button onclick="goToQualifications()">Next</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
 
-    
+                <div class="step" id="step10">
+                    <h2>Step 10: Qualifications</h2>
+                    <label>Area of Study: </label><br><br>
+                    <input type="text" id="areaInput" placeholder="Enter Area of Study">
+                    <button onclick="goToDegree()">Next</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
+                <div class="step" id="step11">
+                    <h2>Step 11: Qualifications</h2>
+                    <label>Highest Degree: </label><br><br>
+                    <input type="text" id="degreeInput" placeholder="Enter Highest Degree">
+                    <button onclick="goToUniversity()">Next</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
+                <div class="step" id="step12">
+                    <h2>Step 12: Qualifications</h2>
+                    <label>University/Institution: </label><br><br>
+                    <input type="text" id="uniInput" placeholder="Enter University/Institution">
+                    <button onclick="goToCompletionYear()">Next</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
+                <div class="step" id="step13">
+                    <h2>Step 13: Qualifications</h2>
+                    <label>Completion Year: </label><br><br>
+                    <input type="text" id="yearInput" placeholder="Enter Completion Year">
+                    <button onclick="goToCountry()">Next</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
+                <div class="step" id="step14">
+                    <h2>Step 14: Qualifications</h2>
+                    <label>Country: </label><br><br>
+                    <input type="text" id="countryInput" placeholder="Enter Country">
+                    <button onclick="submitForm()">Submit</button>
+                    <button onclick="skipStep()">Skip</button>
+                </div>
+                <div class="step" id="step15">
+                    <h2>Confirmation</h2>
+                    <div id="userDetails"></div>
+                </div>
+            </div>
+        </div> <!-- End Box A -->
+   
     <script src="scripts/theme.js"></script>
     <script src="scripts/profile.js"></script>
 
