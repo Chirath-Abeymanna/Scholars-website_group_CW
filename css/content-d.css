@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, 'Spartan';
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: rgba(36, 199, 253, 0.8);
+}
+
+h2 {
+    color: rgba(36, 199, 253, 0.8);
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+ul, ol {
+    font-size: 1.2em;
+}
+
+.image-section {
+    flex: 1;
+    position: relative;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.face-outline {
+    width: 150px;
+    height: 200px;
+    border: 2px solid #00ff9d;
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+    right: 75px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.decorations {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.hexagon {
+    width: 50px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #00ff9d;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.circle-outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #00ff9d;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
+
+.zigzag {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+    background: linear-gradient(45deg, transparent 49.5%, #00ff9d 49.5%, #00ff9d 50.5%, transparent 50.5%);
+    background-size: 10px 10px;
+}
