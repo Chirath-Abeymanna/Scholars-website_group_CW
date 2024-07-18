@@ -1,104 +1,119 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Scholars - Feedback</title>
-        <link rel="stylesheet" href="css/main_style.css">
-        <link rel="stylesheet" href="css/feedback.css">
-        <link rel="icon" href="img/logo-title.png" type="image/x-icon">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
-    <body >
-
-        <header>
-            <img src="img/logo.svg" alt="">
-            <nav>
-                <ul>
-                    <li><a href="Home.html"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="profile.html" class=""><i class="fa-solid fa-circle-user"></i> Profile</a></li>
-                    <li><a href="gallery.html" class=""><i class="fa fa-images"></i> Gallery</a></li>
-                    <li><a href="shop.html" class=""><i class="fa fa-shop"></i> Shop</a></li>
-                    <li><a href="team.html" class=""><i class="fa-solid fa-users"></i> Our Team</a></li>
-                    <li><a href="sitemap.html" class=""><i class="fa-solid fa-sitemap"></i> Sitemap</a></li>
-                    <li><a href="feedback.html" class="active"><i class="fa-solid fa-clipboard"></i> Make us better</a></li>
-                    <img src="img/moon.png" alt="" id="theme">
-                </ul>
-            </nav>
-        </header> 
-        <div class="form-container">
-            <h2>Hey There.. Help Us Improve</h2>
-            <form id="feedbackForm">
-                <input type="text" id="name" placeholder="Enter your name" required>
-                <div class="error" id="nameError"></div>
-                
-                <input type="email" id="email" placeholder="Enter your email" required>
-                <div class="error" id="emailError"></div>
-                
-                <p>First time visiting?</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholars - Feedback</title>
+    <link rel="stylesheet" href="css/main_style.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="icon" href="img/logo-title.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.svg" alt="">
+        <nav>
+            <ul>
+                <li><a href="Home.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="profile.html"><i class="fa-solid fa-circle-user"></i> Profile</a></li>
+                <li><a href="gallery.html"><i class="fa fa-images"></i> Gallery</a></li>
+                <li><a href="shop.html"><i class="fa fa-shop"></i> Shop</a></li>
+                <li><a href="team.html"><i class="fa-solid fa-users"></i> Our Team</a></li>
+                <li><a href="sitemap.html"><i class="fa-solid fa-sitemap"></i> Sitemap</a></li>
+                <li><a href="feedback.html" class="active"><i class="fa-solid fa-clipboard"></i> Make us better</a></li>
+                <li><img src="img/moon.png" alt="" id="theme"></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="form-container">
+        <h2>Hey There.. Help Us Improve</h2>
+        <form id="feedbackForm">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <div class="error" id="nameError"></div>
+            
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <div class="error" id="emailError"></div>
+            
+            <p>First time visiting?</p>
+            <div class="yesno">
                 <input type="radio" name="firstVisit" value="yes" required> Yes
                 <input type="radio" name="firstVisit" value="no"> No
-                
-                <p>Was The Website Easy To Access?</p>
-                <input type="radio" name="informative" value="yes" required> Yes
-                <input type="radio" name="informative" value="no"> No
-                
-                <textarea id="improvements" placeholder="Suggest any improvements"></textarea>
-                
-                <p>How satisfied are you with our services? (1-10)</p>
-                <input type="number" id="satisfaction" min="1" max="10" required>
-                
-                <p>Would You Like To Reccommend Our Service?</p>
-                <select id="recommend" required>
-                    <option value="">Select an option</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-                
-                <p>Do You Like To Receive Newest Updates?</p>
-                <select id="updates" required>
-                    <option value="">Select an option</option>
-                    <option value="yes">Yes - via Email</option>
-                    <option value="no">No</option>
-                </select>
-                
-                <textarea id="additionalComments" placeholder="Any additional comments?"></textarea>
-                
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    
-        
-        <script src="scripts/feedback.js"></script>
-        <script src="scripts/theme.js"></script>
+            </div>
+            
+            <div class="yesno">
+            <p>Was The Website Easy To Access?</p>
+            <input type="radio" name="informative" value="yes" required> Yes
+            <input type="radio" name="informative" value="no"> No
+            </div>
+            
+            <textarea id="improvements" placeholder="Suggest any improvements"></textarea>
+            
+            <p>How satisfied are you with our services? (1-10)</p>
+            <input type="number" id="satisfaction" min="1" max="10" required>
+            
+            <p>Would You Like To Recommend Our Service?</p>
+            <select id="recommend" required>
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <p>Do You Like To Receive Newest Updates?</p>
+            <select id="updates" required>
+                <option value="">Select an option</option>
+                <option value="yes">Yes - via Email</option>
+                <option value="no">No</option>
+            </select>
+            
+            <textarea id="additionalComments" placeholder="Any additional comments?"></textarea>
 
-        <footer>
-            <div class="footer-content">
-                <div class="footer-name">
-                    <h2>Scholars</h2>
-                    <p>Hey There!</p>
-                </div>
-                <div class="footer-links">
-                    <div class="link-column">
-                        <h3>Student 1</h3>
-                    </div>
-                    <div class="link-column">
-                        <h3>Student 2</h3>
-                    </div>
-                    <div class="link-column">
-                        <h3>Student 3</h3>
-                    </div>
-                    <div class="link-column">
-                        <h3>Student 4</h3>
-                    </div>
-                </div>
+            <div class="button-container">
+                <button type="button" id="previewButton">Preview</button>
+                <button type="submit" id="submitButton">Submit</button>
+
             </div>
-            <hr class="footer-divider">
-            <div class="footer-bottom">
-                <p>&copy;Copyright. All rights reserved.</p>
-            </div>
-        </footer>
-    
-    <script src="scripts/theme.js"></script>
+        </form>
+    </div>
+
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Preview of Your Feedback</h2>
+            <div id="previewContent"></div>
+        </div>
+    </div>
+
     <script src="scripts/feedback.js"></script>
-    </body>
+    <script src="scripts/theme.js"></script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-name">
+                <h3>Scholars</h3>
+                <p>Stay Informed, Follow Us To Get The Newset Books</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h3><a href="page-editor-chirath.html" target="_blank">Student 1</a></h3>
+                </div>
+                <div class="link-column">
+                    <h3><a href="page-editor-dulan.html" target="_blank">Student 2</a></h3>
+                </div>
+                <div class="link-column">
+                    <h3><a href="page-editor-nirmana.html" target="_blank">Student 3</a></h3>
+                </div>
+                <div class="link-column">
+                    <h3><a href="page-editor-imeth.html" target="_blank">Student 4</a></h3>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy;Copyright. All rights reserved.</p>
+                <p><a href="https://www.un.org/en/about-us/terms-of-use" target="_blank">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

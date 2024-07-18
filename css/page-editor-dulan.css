@@ -1,0 +1,77 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    height: 100%;
+}
+.container {
+    display: flex;
+    height: 100%;
+}
+.left-panel {
+    background-color: rgba(36, 199, 253, 0.8);
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.card {
+    background-color: rgba(20, 155, 220, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.profile-pic {
+    width: 275px;
+    height: 275px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.title {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.right-panel {
+    flex-grow: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1 {
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+.highlight {
+    color: rgba(36, 199, 253, 0.8);
+}
+.buttons {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: rgba(36, 199, 253, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.description {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn:hover {
+    background-color: aquamarine;
+}
+

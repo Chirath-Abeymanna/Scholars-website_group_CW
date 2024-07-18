@@ -2,17 +2,96 @@
    font-family: 'poppins';
    src: url("../fonts/Poppins/Poppins-Regular.ttf");
 }
-
- .container{
-   outline: none;
-   font-family: 'poppins',sans-serif;
-   display:flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    width: 30px;
-    background: #fff;
-    border-radius:  5px;
-    text-align: center;
-    padding: 50px 35px 10px;
+ 
+body main{
+   
+   margin: 0;
+   padding: 0;
+   background-color:white;
+   background-image: url('background-image.jpg'); /* Add your background image URL */
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
  }
+ 
+ .start-message {
+   text-align: center;
+   margin-bottom: 20px; /* Adjust margin as needed */
+ }
+ 
+ .start-message p {
+   margin: 0;
+ }
+ 
+ .container {
+   width: 400px; /* Set a fixed width for the container */
+   padding: 20px;
+   background-color: rgba(255, 255, 255, 0.9);
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   text-align: center; /* Center the content inside the container */
+ }
+ 
+ 
+ .step {
+   display: none;
+ }
+ 
+ .active {
+   display: block;
+ }
+ 
+ label {
+   font-weight: bold;
+ }
+ 
+ input[type="text"] {
+   width: calc(100% - 20px); /* Adjusted width to consider padding */
+   padding: 10px;
+   margin-bottom: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box; /* Prevents the input from expanding beyond specified width */
+ }
+ 
+ button {
+   padding: 10px 20px;
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-right: 10px;
+ }
+ 
+ button:hover {
+   background-color: #45a049;
+ }
+ 
+ .button-container {
+   margin-top: 30px; /* Adjust the margin-top value as needed */
+ }
+ 
+ 
+ h2 {
+   margin-top: 0;
+ }
+ 
+ #userDetails {
+   border-top: 1px solid #ccc;
+   padding-top: 20px;
+   margin-top: 20px;
+ }
+ 
+ #startButton {
+   margin-left: 160px; /* Adjust margin as needed */
+ }
+ .box-a{
+  color:black;
+  position:relative;
+  top:30%;
+  left:35%;
+}

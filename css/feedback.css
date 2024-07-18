@@ -1,12 +1,7 @@
 body {
-    font-family: 'Spartan';
-    src: url('../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Spartan', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('../img/Dulan/Background Image for FeedbackForm.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     min-height: 100vh;
 }
 
@@ -36,9 +31,12 @@ textarea {
     box-sizing: border-box;
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.8);
 }
 
+.yesno {
+    color: black;
+
+}
 input[type="radio"] {
     margin-right: 5px;
 }
@@ -53,17 +51,26 @@ input[type="radio"] {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #4CAF50;
+    background-color: rgba(36, 199, 253, 0.8);
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-container button {
+    width: 48%;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: rgba(20, 150, 220, 0.8);
 }
 
 p {
@@ -71,12 +78,45 @@ p {
     color: #333;
 }
 
-select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-    background-repeat: no-repeat;
-    background-position-x: 98%;
-    background-position-y: 50%;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#previewContent {
+    color: black;
+}
+
+#previewContent strong {
+    color: black;
 }
