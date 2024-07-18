@@ -1,0 +1,104 @@
+
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+}
+.main{
+    position: relative;
+    top: 2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;  
+    height: 100vh;
+}
+
+.main img {
+    width: 90%;
+    height: auto;
+    
+}
+    
+.profile-css {
+    position:relative;
+    margin-left: 2rem;
+    width:250px;
+    height:250px;
+    padding:30px;
+    border: 2px solid black;
+}
+.profile-css .caption{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    padding: 20px;
+    height:89%;
+    width:89%;
+    top:0rem;
+    left:0rem;
+    font-family: 'Spartan';
+    font-size:20px;
+}
+
+#page-edtior{
+    position: relative;
+    top: 5rem;
+    right: 1rem;
+
+}
+#content-page{
+    position:relative;
+    top:5rem;
+    left:1rem;
+}
+.profile-css .caption:hover{
+    background-color:#1c1a33;
+    color:white;
+    opacity: 1;
+}
+
+.profile-css .img {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+#highlight {
+    color:#38b6ff; 
+    font-weight: bold;
+    padding: 2px; 
+    border-radius: 3px; 
+}
+#highlight-2 {
+    color:#088395; 
+    font-weight: bold;
+    padding: 2px; 
+    border-radius: 3px; 
+}
+.profile-css a{
+    color:#38b6ff;
+}
+
+#student-1{
+    object-position: center -10px;
+}
+
+#student-2{
+    object-position: center -9px;
+}
+
+#student-3{
+    object-position: center -10px;
+}
+
+#student-4{
+    object-position: center -10px;
+}
