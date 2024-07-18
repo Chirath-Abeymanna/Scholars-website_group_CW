@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Bebas_Neue';
+    src: url('../fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding,5rem);
+}
+body{
+    font-family: 'poppins';
+}
+
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.intro{
+    width: 60%;
+    margin-right: 2rem;
+}
+
+.intro h2{
+    overflow: hidden;
+    font-size: 4rem;
+    top: 15%;
+    letter-spacing: 4px;
+    text-align: left;
+    position: relative;
+    font-family: 'Bebas_Neue';
+    background-clip: text;
+    color: #181b75;
+    background-size: 80%;
+    padding: 2% ;
+}
+.intro p{
+    position: relative;
+    text-align: left;
+    top: -3rem;
+    font-size: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.main-buttons {
+    position: relative;
+    top: -0.5rem;
+    padding-top: 1rem;
+    text-align: left;
+    overflow: hidden;
+}
+
+.main-buttons a {
+    display: inline-block;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 800px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    background-color: #8ca4a8;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 30px; /* Align text vertically */
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-buttons a:hover {
+    background-color: rgb(89, 46, 142);
+    bottom: 0.3rem;
+    color: azure;
+}
+
+.intro-image {
+    width: 40%;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.topic-container{
+    position: relative;
+    padding-top: 2rem;
+    height: 90vh;
+}
+
+.topic-container h3{
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+
+.topic-container .topic-description{
+    display: flex;
+    justify-content: center;
+}
+
+.topic-container .topic-description img{
+    position: relative;
+    width: 100%;
+    max-height: 20rem;
+    max-width: 30rem;
+    margin-left: 2rem;
+    margin-right: 3rem;
+    border-radius: 1rem;
+}
+.topic-container .topic-description p{
+    text-align: justify;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-family: "spartan";
+}
+
+#topic1{
+    background-color: #000824;
+    color: white;
+}
+#topic2{
+    background-color: #137bbc;
+    color: white;
+}
+#topic3{
+    background-color: #317985;
+    color: white;
+}
+#topic4{
+    background-color: #EBF4F6;
+    color: black;
+}
+#topic5{
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
