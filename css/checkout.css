@@ -56,17 +56,18 @@ body{
     display: flex;
     justify-content: center;
 }
-
+/* Styling the feedback part */
 .feedback{
     position: relative;
     display: none;
     text-align: center;
     border-radius: 10px;
-    margin-top: 10rem;
+    margin-top: 6rem;
     justify-content: center;
     width: 100%;
     max-width: 30rem;
-    height: 20rem;
+    padding-bottom: 1rem;
+    height: max-content;
     background-color: white;
     box-shadow: 20px 5px 10px  var(--box-shadow-color-normal);
     z-index: 1;
@@ -75,6 +76,15 @@ h3{
     padding-top: 2.5rem;
     padding-bottom: 2rem;
 }
+.feedback h4, .feedback p{
+    text-align: left;
+    padding-left: 1rem;
+}
+.feedback #total-price{
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
 #shop{
     font-family: 'poppins';
     font-weight: 500;
@@ -82,6 +92,7 @@ h3{
     width: 100px;
     height: 30px;
     margin-left: 20rem;
+    margin-top: 2rem;
     background-color:  rgba(36, 199, 253, 0.8);
     border: none;
     border-radius: 5px;

@@ -1,10 +1,11 @@
 let slider = document.querySelector('.Top-sellers .list');
 let items = document.querySelectorAll('.Top-sellers .list .item');
-let img_tag = document.querySelectorAll('.Top-sellers .list button');
+let img_tag = document.querySelectorAll('.Top-sellers .list button[name]');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let dots = document.querySelectorAll('.Top-sellers .dots li');
 const product_template = document.querySelector("[data-content]"); 
+let productDetails = {};
 
 
 //Creating the functions for image slider in top sellers
@@ -33,9 +34,9 @@ function reloadSlider(){
 
 }
 img_tag.forEach((button)=>{
-    console.log(button)
-    let img = button.id;
-    console.log(img)
+    console.log(button.outerHTML)
+    let img = button.getAttribute("name");
+    console.log(img);
     button.addEventListener('click',()=>{
         let title = encodeURIComponent(img);
         window.location.href = `../content/product.html?title=${title}`;
@@ -58,7 +59,6 @@ search_btn.addEventListener('click',(event)=>{
     event.preventDefault()
 
     search_item_value = search_bar.value;
-    console.log(search_item_value);
     const search_items = encodeURIComponent(search_item_value);
     window.location.href = `content/search.html?search=${search_items}`;
 })
@@ -66,6 +66,16 @@ search_btn.addEventListener('click',(event)=>{
 // Creating functions adding items to the product cardss
 
 document.addEventListener("DOMContentLoaded", function() {
+
+
+    function gatherCartData() {
+        const cartItems = document.querySelectorAll(".cart-container table tbody tr");
+        cartItems.forEach(item => {
+            const title = item.querySelector(".title").textContent;
+            const quantity = parseInt(item.querySelector(".quantity-input").value);
+            productDetails[title] = quantity;
+        });
+    }
 
     fetch("json/content.json").then(response => response.json())
     .then(data => {
@@ -89,8 +99,6 @@ document.addEventListener("DOMContentLoaded", function() {
             // updating the elements with data
             image[0].src = product.img;
             image[0].alt = title;
-            image[1].src = product.img2;
-            image[1].alt = title;
             description_type.textContent = product.type;
             description_h5.textContent = title;
             description_h6.textContent = product.author;
@@ -117,9 +125,12 @@ document.addEventListener("DOMContentLoaded", function() {
             button.addEventListener("click",function(event){
                 const container = this.closest(".product")
                 const price_tag = container.querySelector("#amount");
+                const title = container.querySelector("h5").textContent;
+                productDetails[title] = 1;
 
                 const price = encodeURIComponent(parseInt(price_tag.textContent));
-                window.location.href =`../content/checkout.html?price=${price}`;
+                const product_object = encodeURIComponent(JSON.stringify(productDetails));
+                window.location.href =`../content/checkout.html?price=${price}&object=${product_object}`;
 
                 console.log(Number.isInteger(price));
             })

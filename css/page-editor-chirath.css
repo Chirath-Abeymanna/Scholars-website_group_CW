@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+}
+body{
+    font-family: 'Spartan';
+    background-color: #14131e;
+    color: white;
+    display: flex;
+}
+
+#logo{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: 100px;
+    height: 60px;
+}
+
+.profile{
+    position: fixed;
+    top: 7rem;
+    left: 3rem;
+    width: 33rem;
+    height: 75vh;
+    border: 2px solid #8fc2fd;
+    box-shadow: 0px 0px 25px #4D9FFF ;
+    border-radius: 20px;
+}
+
+.profile img{
+    position: relative;
+    top: 2rem;
+    left: 8rem;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    aspect-ratio: 1 /1;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 0px;
+
+}
+
+.profile p{
+    position: relative;
+    top: 2rem;
+    left: 1rem;
+    margin-top: 2rem;
+}
+
+.profile .intro{
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+
+.profile a{
+    position: relative;
+    top: 0rem;
+    left: 28rem;
+    text-decoration: none;
+    color: white;
+    background-color: #38B6FF;
+    padding: 0.5rem;
+    border-radius: 30%;
+    
+}
+
+#name{
+    color: #38B6FF;
+    text-shadow: 0 0 30px #38B6FF;
+}
+
+.profile .student{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#student-role{
+    color: #088395;
+}
+
+.profile .description{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Styling the tasks */
+
+.tasks{
+    position: relative;
+    width: 48vw;
+    margin-right: 2rem;
+    margin-left: 45vw;
+    top: 2rem;
+    padding-left: 4rem;
+}
+
+.tasks::after{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 5px;
+    height: 93%;
+    border-radius: 2px;
+    top: 0;
+    left: 0;
+}
+
+.task-card{
+    position: relative;
+    border: 1px solid white;
+    border-radius: 10px ;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+#content-card{
+    position: relative;
+}
+
+#content-card::before{
+    content: "";
+    background-color: white;
+    position: absolute;
+    top: 5%;
+    width: 40px;
+    height: 5px;
+    border-radius: 2px;
+    left: -4rem;
+}
+
+.task-card .main-topic::before{
+    content: "";
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: -2.2rem;
+    left: -2.8rem;
+}
+.connector{
+    position: relative;
+}
+
+.connector::after{
+    content: "";
+    position: absolute;
+    top: -1.8rem;
+    left: -5rem;
+    width: 40px;
+    height: 5px;
+    background: white;
+}
+
+.main-topic{
+    position: relative;
+    font-size: 1.5rem;
+    color: #4D9FFF;
+}
+
+.sub-topic{
+    color: #088395;
+}
+
+.link{
+    margin-right: auto;
+    text-align: right;
+    padding-right: 2rem;
+}
+.link a{
+    color: #38B6FF;
+}

@@ -13,20 +13,11 @@
 }
 
 :root{
-    --background-color: rgb(231, 240, 248);
-    --font-color: #1a1a1a;
-    --seperator-color: rgba(0, 0, 0, 0.06);
-    --theme-shadow-color: inset 0px 0px 10px 10px rgba(198, 222, 11, 0.15),0px 0px 20px 20px rgba(198, 222, 11, 0.25);
     --box-shadow-color-normal: rgba(0,0,0,0.1);
     --box-shadow-color-hover: rgba(0,0,0,0.3);
 }
 
 .dark-theme{
-
-    --background-color: #010101;
-    --font-color: rgb(231, 240, 248);
-    --seperator-color: rgba(188, 188, 188, 0.09);
-    --theme-shadow-color: inset 10px 20px 0px 0px rgba(231, 240, 248, 0.09),0px 0px 20px 20px rgba(231, 240, 248, 0.20);
     --box-shadow-color-normal: rgba(255, 255, 255, 0.1);
     --box-shadow-color-hover: rgba(255, 255, 255, 0.18);
 
@@ -105,17 +96,17 @@ h2{
 }
 
 .quantity{
-    background-color: white;
+    background-color: transparent;
     position: relative;
     border-radius: 20px;
-    width: 100px;
+    width: 97.8px;
     padding: 0;
     
 }
 .quantity-input {
     position: relative;
-    background: transparent;
-    top:0.1rem;
+    background: white;
+    top:0rem;
     text-align: center;
     font-size: 1.2rem;
     width: 100%;
@@ -123,28 +114,36 @@ h2{
     margin: 0;
     border: none;
     outline: none;
-    height: 30px;
-    bottom: 5px;
+    height: 38px;
+    bottom: 8px;
+
 }
 
 .quantity button{
+    position: relative;
     font-size: 1rem;
     cursor: pointer;
     color: white;
     outline: none;
-    border: none;
+    border: 0.5px solid white;
     background-color: #010101;
     width: 1.8rem;
-    height: 2rem;
+    height: 2.3rem;
+    bottom: 0.05rem;
 }
 .minus-button{
-border-top-left-radius: 20px;
-border-bottom-left-radius: 20px;
+    z-index: 200;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 10px solid white;
+    outline: auto;
 }
 
 .plus-button{
-border-top-right-radius: 20px;
-border-bottom-right-radius: 20px;
+    z-index: 200;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
 }
 .sum-total{
     margin-top: 2rem;

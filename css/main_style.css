@@ -2,16 +2,24 @@
     font-family: 'Spartan';
     src: url('../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
 
 :root{
     --background-color: rgb(231, 240, 248);
+    --scroll-bar-background-color: #ababab;
+    --scroll-bar-font-color:#1a1a1a;
     --font-color: #1a1a1a;
     --seperator-color: rgba(0, 0, 0, 0.06);
     --theme-shadow-color: inset 0px 0px 10px 10px rgba(198, 222, 11, 0.15),0px 0px 20px 20px rgba(198, 222, 11, 0.25);
 }
 .dark-theme{
 
-    --background-color: #010101;
+    --background-color: #0d0d13;
+    --scroll-bar-background-color:rgb(231, 240, 248);
+    --scroll-bar-font-color:#ababab;
     --font-color: rgb(231, 240, 248);
     --seperator-color: rgba(188, 188, 188, 0.09);
     --theme-shadow-color: inset 10px 20px 0px 0px rgba(231, 240, 248, 0.09),0px 0px 20px 20px rgba(231, 240, 248, 0.20);
@@ -21,16 +29,17 @@
 ::-webkit-scrollbar{
     width: 12px;
     border-radius: 1.2rem;
-    background-color: #ababab;
+    background-color: var(--scroll-bar-background-color);
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: var(--font-color);
+    background-color: var(--scroll-bar-font-color);
     height: 30%;
     border-radius: 1.2rem;
 }
 
 body{
+    font-family: 'Spartan','poppins',sans-serif;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -52,7 +61,7 @@ body{
     outline: none;
 }
 
-.header {
+header {
     width: 100%;
     display: flex;
     font-family: 'Spartan',sans-serif;
@@ -68,7 +77,7 @@ body{
     top: 0;
     left: 10px;
 }
-.header img{
+header img{
     width: 100%;
     max-width: 150px;
     max-height: 60px;
@@ -76,17 +85,17 @@ body{
     cursor: pointer;
 }
 
-.nav-bar ul{
+nav ul{
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
-.nav-bar ul li{
+nav ul li{
     list-style: none;
     padding: 0.2rem 1rem;
 }
-.nav-bar ul li a{
+nav ul li a{
     display: inline-block;
     text-decoration: none;
     font-size: 1.3rem;
@@ -97,12 +106,12 @@ body{
 
 }
 
-.nav-bar ul li :hover,
-.nav-bar ul li a.active{
+nav ul li :hover,
+nav ul li a.active{
     color: rgb(8, 151, 194);
 }
 
-.nav-bar ul li a.active::after{
+nav ul li a.active::after{
     content: "";
     width: 50%;
     height: 3px;
@@ -112,7 +121,7 @@ body{
     bottom: -8px;
     left: 0;
 }
-.nav-bar ul li a::after{
+nav ul li a::after{
     content: "";
     width: 0%;
     height: 3px;
@@ -124,6 +133,110 @@ body{
     transition: width 0.3s ease;
 }
 
-.nav-bar ul li :hover::after{
+nav ul li :hover::after{
     width: 100%;
+}
+footer {
+    background-color: #1a1a1a;
+    border-top: 1px solid var(--seperator-color);
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+footer h3 {
+    color: white;
+    animation: none;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-name h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.footer-name p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+
+.link-column h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.link-column a {
+    display: block;
+    color: #999;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20 px;
+    
+}
+
+.copyright a{
+    text-decoration: none;
+    color: #666;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.link-column a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    
+    .link-column {
+        flex-basis: 50%;
+        margin-bottom: 20px;
+    }
 }

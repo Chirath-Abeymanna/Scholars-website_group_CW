@@ -2,7 +2,6 @@
    font-family: 'poppins';
    src: url("../fonts/Poppins/Poppins-Regular.ttf");
 }
-
  
 body main{
    
@@ -95,5 +94,4 @@ body main{
   position:relative;
   top:30%;
   left:35%;
-  
- }
+}

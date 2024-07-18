@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const urlParams = new URLSearchParams(window.location.search);
     const productTitle = urlParams.get('title');
     console.log(productTitle)
+    let productDetails = {};
 
     fetch("../json/content.json").then(response => response.json())
     .then(data => {
         const product = data[productTitle];
         if (product) {
+            
             // Populate the template with the product data
             const template = document.querySelector(".product-section template").content;
             const clone = template.cloneNode(true);
@@ -69,19 +71,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
         buy_now_btn.addEventListener('click',()=>{
 
             let q = document.getElementById("quantity");
+            const title =document.querySelector(".description h2").textContent
 
             let current_quantity = parseInt(q.value);
             let price = parseInt(price_tag.textContent);
 
             const final_price = current_quantity * price;
+            productDetails[title] = current_quantity;
             
             const url_price = encodeURIComponent(parseInt(final_price));
-            window.location.href =`../content/checkout.html?price=${url_price}`;
+            const product_object = encodeURIComponent(JSON.stringify(productDetails));
+            window.location.href =`../content/checkout.html?price=${url_price}&object=${product_object}`;
 
 
         })
-
-
 
         // Debugging
         console.log(quantity.value);

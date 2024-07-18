@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     const cartDataString = urlParams.get('cartData');
     const cart_data = JSON.parse(decodeURIComponent(cartDataString));
+    let productDetails = {};
 
     
     let total_items = 0;
@@ -135,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     
                         const target = event.target;
     
-                        
+                        //Changing the price value in the price coloumn using buttons
                         if (target.classList.contains("minus-button") || target.classList.contains("plus-button")) {
 
                             let current_value = parseInt(input.value);
@@ -154,12 +155,30 @@ document.addEventListener("DOMContentLoaded", function() {
     
                                 // Update price
                                 const amount = row.querySelector(".amount-tag"); 
-                                amount.textContent = `${product.price * current_value}`;
+                                amount.textContent = `${(product.price * current_value).toFixed(2)}`;
     
                                 // Recalculate total price
                                 calculateTotal();
                             }
                         }
+                        //Calculating the price change when it done using the input field
+                        input.addEventListener("input",function(event){
+                            
+                            let current_value = parseInt(input.value);
+
+                            if (!isNaN(current_value) && checkBox.checked && current_value >0){
+
+                                //update the price
+                                const amount = row.querySelector(".amount-tag"); 
+                                amount.textContent = `${(product.price * current_value).toFixed(2)}`;
+
+                                // Recalculate total price
+                                calculateTotal();
+                            }
+                            if (isNaN(current_value)){
+                                input.value = "1";
+                            }
+                        })
                     });
                     checkBox.addEventListener('change', calculateTotal);
 
@@ -167,13 +186,29 @@ document.addEventListener("DOMContentLoaded", function() {
                     const check_out_btn = document.getElementById("buy-now");
                     console.log(sum_total.outerHTML);
 
+
+                    // Function to gather cart data and pass it to the checkout page
+                    function gatherCartData() {
+                        const cartItems = document.querySelectorAll(".cart-container table tbody tr");
+                        cartItems.forEach(item => {
+                            const title = item.querySelector(".title").textContent;
+                            const quantity = parseInt(item.querySelector(".quantity-input").value);
+                            productDetails[title] = quantity;
+                        });
+                    }
+
+
+                    //Passing data into cart html
+
                     check_out_btn.addEventListener("click",function(event){
 
                         console.log(typeof(sum_total.textContent));
 
                         if ((sum_total.textContent!="0.00")){    
+                            gatherCartData()
                             const final_prize = encodeURIComponent(sum_total.textContent);
-                            window.location.href = `../content/checkout.html?price=${final_prize}`;
+                            const product_object = encodeURIComponent(JSON.stringify(productDetails));
+                            window.location.href = `../content/checkout.html?price=${final_prize}&object=${product_object}`;
                         }
                 })
                 },200)
