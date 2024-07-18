@@ -45,19 +45,20 @@ body{
     padding-right: 0;
 }
 
-.main-buttons{
+.main-buttons {
     position: relative;
-    top: -2rem;
+    top: -0.5rem;
     padding-top: 1rem;
     text-align: left;
     overflow: hidden;
 }
-.main-buttons button{
-    position: relative;
+
+.main-buttons a {
+    display: inline-block;
     padding: 0.5rem;
     margin-bottom: 1.5rem;
-    width: 100%;
-    height: 35px;
+    width: 800px;
+    height: 30px;
     font-size: 1rem;
     font-weight: 600;
     outline: none;
@@ -65,10 +66,14 @@ body{
     border-radius: 25px;
     background-color: #8ca4a8;
     color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 30px; /* Align text vertically */
+    text-decoration: none;
     cursor: pointer;
     transition: 0.3s;
 }
-.main-buttons button:hover{
+
+.main-buttons a:hover {
     background-color: rgb(89, 46, 142);
     bottom: 0.3rem;
     color: azure;

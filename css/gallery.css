@@ -13,6 +13,34 @@
 
 }
 
+.Georgia {
+    font-family: Georgia;
+}
+
+.Times-New-Roman {
+    font-family: 'Times New Roman';
+}
+
+.Spartan {
+    font-family: 'Spartan';
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.black {
+    background-color: black;
+}
+
 h1 {
     text-align: center;
     padding: 20px;
@@ -103,13 +131,12 @@ h2 {
 }
 
 .description {
-    background-color: #000000;
     color: #fff;
     text-align: justify;
     margin-top: -200px;
     margin-left: 10px;
     width: 45%;
-    
+    padding: 1rem;
 }
 
 .close {
@@ -120,3 +147,20 @@ h2 {
     font-size: 30px;
     text-decoration: none;
 }
+
+.font-button {
+    background-color: rgb(118, 110, 145);
+    color: #000000;
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+}
+
+.text-bg-color {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-radius: 10px;
+    width: 75px;
+    height: 30px;
+}
+
